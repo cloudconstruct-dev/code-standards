@@ -1,0 +1,63 @@
+@import "_variables";
+
+///////////////////////////////////////////
+// Media Queries mixin
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      544px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "small-desktop":992px,
+    "tablet-wide":  1024px,
+    "desktop":      1200px,
+    "desktop-wide": 1600px,
+    "stupid-wide": 2100px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+
+///////////////////////////////////////////
+// Prefix Mixin
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+
+///////////////////////////////////////////
+// Prefix Mixin
+
+@mixin prefixValue($property, $value, $prefixes: (), $content: null) {
+    @each $prefix in $prefixes {
+        #{$property}: #{'-' + $prefix + '-' + $value $content};
+    }
+    // Output standard non-prefixed declaration
+    #{$property}: $value $content;
+}
+
+
+///////////////////////////////////////////
+// Flexbox Mixin
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

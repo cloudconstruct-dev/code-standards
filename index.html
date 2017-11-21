@@ -1,1 +1,257 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Constructs Front-End Code Standards</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="shortcut icon" href="Assets/Icons/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="Assets/Icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="Assets/Icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Assets/Icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Assets/Icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Assets/Icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Assets/Icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Assets/Icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Assets/Icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Assets/Icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="Assets/Icons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="Assets/Icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="Assets/Icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="Assets/Icons/android-chrome-192x192.png" sizes="192x192">
+<meta name="msapplication-square70x70logo" content="Assets/Icons/smalltile.png" />
+<meta name="msapplication-square150x150logo" content="Assets/Icons/mediumtile.png" />
+<meta name="msapplication-wide310x150logo" content="Assets/Icons/widetile.png" />
+<meta name="msapplication-square310x310logo" content="Assets/Icons/largetile.png" />
+
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="styles.min.css" />
+
+
+</head>
+<body>
+    <div class="mainContent__wrapper" data-spy="scroll" data-target=".navbar" data-offset="0">
+        <div class="header__topLogo">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.45 70.45"><title>cc_logo</title><rect style="fill:#6d6e71;" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" x="23.48" width="23.48" height="23.48"/><rect style="fill:#adafb2;" x="46.97" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" x="23.48" y="23.48" width="23.48" height="23.49"/><rect style="fill:#dedfe0;" x="46.97" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" y="46.97" width="23.48" height="23.48"/><rect style="fill:#dedfe0;" x="23.48" y="46.97" width="23.48" height="23.48"/><rect style="fill:#fff;" x="46.97" y="46.97" width="23.48" height="23.48"/><path style="fill:#e31837;" d="M66.74,48.05C63.32,59.78,51.38,68.19,39.23,68.19A29.21,29.21,0,0,1,10,39C10,23.66,22.11,9.64,37.88,9.64a21.33,21.33,0,0,1,15.89,7V11.31h10.9V29.78H52.83A16.87,16.87,0,0,0,39,22.21c-9.45,0-16.41,7.57-16.41,16.81A16.57,16.57,0,0,0,39.34,55.73c5.39,0,10.9-2.8,13.28-7.68Z" transform="translate(-3.76 -3.68)"/></svg>
+        </div>
+        <section class="mainContent">
+            <header class="header">
+                <div class="header__title">
+                    <h1>Cloud Construct
+                        <br>
+                        <span>Front-End Code Standards</span>
+                    </h1>
+                </div>
+                <div class="header__updated">
+                    <p>Updated 10/10/17</p>
+                </div>
+                <canvas class="header__topSquare">
+                </canvas>
+            </header>
+
+            <!-- Example Topic -->
+            <!--
+            <div class="topic">
+                <div class="topic__title">
+                    <h2>Topic Title</h2>
+                </div>
+                <div class="topic__content">
+                    <ul>
+                        <li>topic list item</li>
+                            <ul>
+                                <li>topic sub list item</li>
+                            </ul>
+                        <li>topic list item</li>
+                        <ol>
+                            <li>topic list item (ordered)</li>
+                        </ol>
+                    </ul>
+                    <ol>
+                        <li>ordered list item</li>
+                    </ol>
+                    <h3>Header 1</h3>
+                    <p>paragraph text</p>
+                    <h4>Header 2</h4>
+                    <p>paragraph text</p>
+                    <div class="topic__code">
+                        <p class="topic__codeSnippet">code snippet</p>
+                        <div class="topic__codeWrap">
+                            <div class="topic__codeType">
+                                <p>HTML</p>
+                            </div><pre class="topic__codePre"><code class="topic__codeContent">code must left align in code editor you are using for left align in front-end.
+
+to escape for HTML
+https://www.freeformatter.com/html-escape.html
+                                
+&lt;div class=&rdquo;className&rdquo;&gt;
+    &lt;p&gt;This is a code snippet&lt;/p&gt;
+&lt;/div&gt;
+
+body {
+    font: 100% Helvetica, sans-serif;
+    color: #333;
+}
+                                
+.box {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="#" target="_blank">Resource Item</a></li>
+                    </ul>
+                </div>
+            </div>
+            -->
+
+
+            <div class="topic" id="highLevelGoals">
+                <div class="topic__title">
+                    <h2>Cloud Construct High-level Front-End Goals</h2>
+                </div>
+                <div class="topic__content">
+                    <ol>
+                        <li>Readability and ease of understanding code across all concerns—HTML, CSS and JS. Always name objects/vars/files with clear, meaningful strings.  Be verbose and comment a LOT—let minification in the build process shrink build output to performant.  drop TODO's liberally in all code.  sign comments whenever possible for reference/trail.  front-end source code should be UNDERSTANDABLE above all else.  If you don't adhere to popular conventions for structure of code, at least create clear conventions in a project, and stick with them consistently across the project.</li>
+                        <li>Organization of source files and build output into clear structure, that matches architecture of a web application or website architecture.</li>
+                        <li>Adherence to the best practices outlined in this document, so that teams are sync'd and development is faster due to common practices.</li>
+                        <li>Use of these basic principles across any technology stack—the basics are valid anywhere.</li>
+                    </ol>
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                    </ul>
+                </div>-->
+            </div>
+            <div class="topic" id="performanceConcerns">
+                    <div class="topic__title">
+                        <h2>General Best Practices for Performance concerns</h2>
+                    </div>
+                    <div class="topic__content">
+                        <ul>
+                            <li>Location of external assets for load performance—follow HTML5 boilerplate standards.</li>
+                            <li>CDN of assets—delivery by CDN should always be utilized to speed loading of assets</li>
+                            <li>Always attempt to limit http request count for any given page, by making smart decisions</li>
+                        </ul>
+                    </div>
+                    <!--<div class="topic__resources">
+                        <h5>Resources:</h5>
+                        <ul class="topic__resourcesList">
+                        </ul>
+                    </div>-->
+                </div>
+            <div class="topic" id="accessibility">
+                <div class="topic__title">
+                    <h2>General Practices for Accessibility</h2>
+                </div>
+                <div class="topic__content">
+                    <ul>
+                        <li>Provide text alternatives for non-text content</li>
+                            <ul>
+                                <li>Using aria-label to provide labels for objects</li>
+                                <li>Using aria-labelledby to provide a text alternative for non-text content</li>
+                                <li>Using alt attributes on img elements</li>
+                            </ul>
+                        <li>Make all functionality available from a keyboard</li>
+                        <li>Give users enough time to read and use content</li>
+                        <li>Do not use content that causes seizures</li>
+                        <li>Organize documents so they can be read without stylesheets</li>
+                    </ul>
+                </div>
+                <div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/intro/wcag" target="_blank">https://www.w3.org/WAI/intro/wcag</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank">https://www.wuhcag.com/wcag-checklist/</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topic" id="aboutCloud">
+                <div class="topic__title">
+                    <h2>About Cloud Construct</h2>
+                </div>
+                <div class="topic__content">
+                    <p>Cloud Construct is a Boston-based web design and development firm that builds web applications, designs responsive and mobile-optimized websites, and creates software solutions that enable companies to do more, faster.</p>
+                    <h4>Design</h4>
+                    <p>We align user requirements and business objectives into user experience and visual design, and create compelling design across all digital interfaces.</p>
+                    <h4>Architect</h4>
+                    <p>Whether working on a new site or updating an existing one, our approach is to build smart the first time, with a structure that supports growth and future enhancements with ease.</p>
+                    <h4>Build</h4>
+                    <p>The development team draws on years of experience and stays up-to-date on the latest technologies. Our expertise is in engineering site features and functionality, and in creating structures that will provide long-term stability and security.</p>
+                </div>
+            </div>
+        </section>
+        <aside class="navigationSidebar">
+            <div class="navigationSidebar__logo">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.36 97.65"><defs><style>.cls-1{fill:#6d6e71;}.cls-2{fill:#8c8e90;}.cls-3{fill:#adafb2;}.cls-4{fill:#dedfe0;}.cls-5{fill:#fff;}.cls-6{fill:#e31837;}</style></defs><title>cc_logo_logotype_outlines_outlines_pms186</title><rect class="cls-1" width="23.48" height="23.48"/><rect class="cls-2" x="23.48" width="23.48" height="23.48"/><rect class="cls-3" x="46.97" width="23.48" height="23.48"/><rect class="cls-2" y="23.48" width="23.48" height="23.49"/><rect class="cls-3" x="23.48" y="23.48" width="23.48" height="23.49"/><rect class="cls-4" x="46.97" y="23.48" width="23.48" height="23.49"/><rect class="cls-3" y="46.97" width="23.48" height="23.48"/><rect class="cls-4" x="23.48" y="46.97" width="23.48" height="23.48"/><rect class="cls-5" x="46.97" y="46.97" width="23.48" height="23.48"/><path class="cls-6" d="M66.74,48.05C63.32,59.78,51.38,68.19,39.23,68.19A29.21,29.21,0,0,1,10,39C10,23.66,22.11,9.64,37.88,9.64a21.33,21.33,0,0,1,15.89,7V11.31h10.9V29.78H52.83A16.87,16.87,0,0,0,39,22.21c-9.45,0-16.41,7.57-16.41,16.81A16.57,16.57,0,0,0,39.34,55.73c5.39,0,10.9-2.8,13.28-7.68Z" transform="translate(-3.76 -3.68)"/><path class="cls-3" d="M18.42,88.18a7.39,7.39,0,1,1-7.32-9.75,5.41,5.41,0,0,1,4,1.77V78.86H17.9v4.68h-3a4.27,4.27,0,0,0-3.5-1.92,4.16,4.16,0,0,0-4.16,4.27,4.21,4.21,0,0,0,4.24,4.24,3.74,3.74,0,0,0,3.37-1.95Z" transform="translate(-3.76 -3.68)"/><path class="cls-3" d="M24.59,89.92H26.4v3h-7v-3h1.95V77.12H19.56v-3h5Z" transform="translate(-3.76 -3.68)"/><path class="cls-3" d="M27.19,85.83a7.38,7.38,0,1,1,7.35,7.46A7.42,7.42,0,0,1,27.19,85.83Zm11.59.06a4.22,4.22,0,1,0-4.24,4.24A4.26,4.26,0,0,0,38.78,85.89Z" transform="translate(-3.76 -3.68)"/><path class="cls-3" d="M56.64,89.92h1.81v3H53.69V91.18a5.15,5.15,0,0,1-4.24,2.11,5.05,5.05,0,0,1-3.9-1.79,5.84,5.84,0,0,1-1.24-4.08V81.86H42.49v-3h5v7.61a4.52,4.52,0,0,0,.56,2.63,2.72,2.72,0,0,0,2.37,1.21,3.11,3.11,0,0,0,2.37-1.16,4.45,4.45,0,0,0,.6-2.76V81.86H51.61v-3h5Z" transform="translate(-3.76 -3.68)"/><path class="cls-3" d="M71.09,90.81a5.3,5.3,0,0,1-4.6,2.32,7.26,7.26,0,0,1,0-14.51,5.84,5.84,0,0,1,4.63,2.29V77.12H69.25v-3h5.06V89.92h1.81v3h-5Zm.08-5a4.25,4.25,0,1,0-4.26,4.35A4.3,4.3,0,0,0,71.17,85.83Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M11.42,99.12a3.38,3.38,0,0,1-3.25,2.21,3.56,3.56,0,1,1,0-7.11,3.49,3.49,0,0,1,3.27,2.25H10.27a2.42,2.42,0,0,0-2.11-1.29,2.6,2.6,0,0,0,0,5.19,2.47,2.47,0,0,0,2.11-1.25Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M13.15,97.81a3.59,3.59,0,1,1,3.58,3.52,3.52,3.52,0,0,1-3.58-3.52Zm1.09,0a2.5,2.5,0,1,0,2.51-2.59,2.51,2.51,0,0,0-2.51,2.59Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M27.32,99.56l0-5.21h1.05v6.85h-1L23.77,96l0,5.22H22.74V94.35h1Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M32.64,99.18a1.16,1.16,0,0,0,1.15,1.23,1.12,1.12,0,0,0,1.14-1.09c0-.77-.65-.94-1.52-1.27-.54-.17-1.73-.57-1.73-1.86a2,2,0,0,1,2.15-2,1.94,1.94,0,0,1,2.07,1.89H34.82a1,1,0,0,0-1-1,1,1,0,0,0-1,1c0,.66.51.83,1.61,1.24.85.36,1.65.8,1.65,1.91a2,2,0,0,1-2.21,2.07,2.08,2.08,0,0,1-2.26-2.15Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M40.24,95.31H38.66v-1H42.9v1H41.33v5.89H40.24Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M45.91,94.35h1.94a3.44,3.44,0,0,1,2,.4,2.2,2.2,0,0,1,.9,1.85,2.24,2.24,0,0,1-.38,1.31,1.88,1.88,0,0,1-1.32.75l1.6,2.54H49.49L47.6,98.11h.25a2.21,2.21,0,0,0,1.37-.3,1.46,1.46,0,0,0,.47-1.12,1.36,1.36,0,0,0-.59-1.15,2.09,2.09,0,0,0-1.16-.23H47v5.89H45.91Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M55.21,94.35v4.28a2,2,0,0,0,.26,1.19,1.21,1.21,0,0,0,1.05.55,1.18,1.18,0,0,0,1-.53,2,2,0,0,0,.25-1.21V94.35H58.9v4.28a2.44,2.44,0,0,1-.74,2.1,2.36,2.36,0,0,1-1.63.6,2.33,2.33,0,0,1-2.41-2.7V94.35Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M68.65,99.12a3.39,3.39,0,0,1-3.25,2.21,3.56,3.56,0,1,1,0-7.11,3.47,3.47,0,0,1,3.26,2.25H67.5a2.45,2.45,0,0,0-2.12-1.29,2.6,2.6,0,0,0,0,5.19,2.47,2.47,0,0,0,2.11-1.25Z" transform="translate(-3.76 -3.68)"/><path class="cls-6" d="M72.52,95.31H70.94v-1h4.24v1H73.61v5.89H72.52Z" transform="translate(-3.76 -3.68)"/></svg>
+            </div>
+            <div class="navigationSidebar__toggle">
+               <div id="menu-toggle">
+                   <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                 </div>
+                 <div class="navigationSidebar__toggleLogo">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.45 70.45"><title>cc_logo</title><rect style="fill:#6d6e71;" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" x="23.48" width="23.48" height="23.48"/><rect style="fill:#adafb2;" x="46.97" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" x="23.48" y="23.48" width="23.48" height="23.49"/><rect style="fill:#dedfe0;" x="46.97" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" y="46.97" width="23.48" height="23.48"/><rect style="fill:#dedfe0;" x="23.48" y="46.97" width="23.48" height="23.48"/><rect style="fill:#fff;" x="46.97" y="46.97" width="23.48" height="23.48"/><path style="fill:#e31837;" d="M66.74,48.05C63.32,59.78,51.38,68.19,39.23,68.19A29.21,29.21,0,0,1,10,39C10,23.66,22.11,9.64,37.88,9.64a21.33,21.33,0,0,1,15.89,7V11.31h10.9V29.78H52.83A16.87,16.87,0,0,0,39,22.21c-9.45,0-16.41,7.57-16.41,16.81A16.57,16.57,0,0,0,39.34,55.73c5.39,0,10.9-2.8,13.28-7.68Z" transform="translate(-3.76 -3.68)"/></svg>
+                 </div>
+            </div>
+            <nav class="navigationSidebar__nav navbar">
+                <h2>Topics</h2>
+                <ul class="navigationSidebar__navList nav navbar-nav">
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#highLevelGoals">High Level Goals</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#performanceConcerns">Performance Concerns</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#accessibility">Accessibility</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#googlebot">Googlebot</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#imageContent">Image Content</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#htmlMarkup">HTML Markup</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#uiFrameworks">UI Frameworks</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#uiStyling">UI Styling</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#jqueryUse">jQuery Use</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#javascript">Javascript</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#javascriptFrameworks">Javascript Frameworks</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#componentBasedArchitecture">Component Based Architecture</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#buildTooling">Build Tooling</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#versionControl">Version Control</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#responsiveWebDesign">Responsive Web Design</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#aboutCloud">About Cloud</a></li>
+                </ul>
+                <canvas class="navigationSidebar__navSquare">
+                </canvas>
+            </nav>
+        </aside>
+        <footer class="footer">
+            <a class="footer__logo" href="http://www.cloudconstruct.com" target="_blank">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.45 70.45"><title>cc_logo</title><rect style="fill:#6d6e71;" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" x="23.48" width="23.48" height="23.48"/><rect style="fill:#adafb2;" x="46.97" width="23.48" height="23.48"/><rect style="fill:#8c8e90;" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" x="23.48" y="23.48" width="23.48" height="23.49"/><rect style="fill:#dedfe0;" x="46.97" y="23.48" width="23.48" height="23.49"/><rect style="fill:#adafb2;" y="46.97" width="23.48" height="23.48"/><rect style="fill:#dedfe0;" x="23.48" y="46.97" width="23.48" height="23.48"/><rect style="fill:#fff;" x="46.97" y="46.97" width="23.48" height="23.48"/><path style="fill:#e31837;" d="M66.74,48.05C63.32,59.78,51.38,68.19,39.23,68.19A29.21,29.21,0,0,1,10,39C10,23.66,22.11,9.64,37.88,9.64a21.33,21.33,0,0,1,15.89,7V11.31h10.9V29.78H52.83A16.87,16.87,0,0,0,39,22.21c-9.45,0-16.41,7.57-16.41,16.81A16.57,16.57,0,0,0,39.34,55.73c5.39,0,10.9-2.8,13.28-7.68Z" transform="translate(-3.76 -3.68)"/></svg>
+                <br>Go to Cloud Construct
+            </a>
+            <div class="footer__copyright">
+                <p>&copy; 2017 Cloud Construct. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="Assets/Scripts/site.js" type="text/javascript"></script>
+</body>
+</html>

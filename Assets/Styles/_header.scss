@@ -1,0 +1,113 @@
+@import "_variables";
+@import "_mixins";
+
+.header {
+    position: relative;
+
+    width: 100%;
+    padding: 15px 0 0 0;
+    margin-top: 50px;
+
+    &__title {
+        padding-left: 30px;
+
+        @include mq('tablet') {
+            padding-left: 50px;
+        }
+    
+        @include mq('desktop') {
+            padding-left: 80px;
+        }
+    }
+
+    &__updated {
+        padding-right: 30px;
+        padding-left: 30px;
+
+        color: $color-gray;
+        
+        font-size: 14px;
+        @extend .roboto-light-italic;
+
+        @include mq('tablet') {
+            position: absolute;
+            right: 0;
+            top: 25px;
+
+            padding-right: 25px;
+            padding-left: 0;
+            
+            text-align: right;
+        }
+    
+        @include mq('desktop') {
+            top: 35px;
+
+            padding-right: 40px;
+
+            font-size: 18px;
+        }
+    }
+
+    &__topSquare {
+        position: absolute;
+        top: -180px;
+        right: -10%;
+        z-index: -3;
+
+        width: 120%;
+        height: 300px;
+
+        background-color: $color-blue;
+
+        transform: rotate(-8deg);
+
+        @include mq('small-desktop') {
+            top: -145px;
+        }
+    }
+
+    &__topLogo {
+        position: fixed;
+        top: 38px;
+        left: 2px;
+        z-index: -1;
+
+        opacity: .4;
+
+        height: 75px;
+        width: 75px;
+
+        transform: rotate(-10deg);
+
+        @include mq('tablet') {
+            top: -10px;
+
+            height: 93px;
+            width: 93px;
+        }
+    
+        @include mq('small-desktop') {
+            height: 120px;
+            width: 120px;
+        }
+    
+        @include mq('desktop') {
+            
+        }
+    }
+
+    @include mq('tablet') {
+        padding: 25px 0 0 0;
+        margin-bottom: 125px;
+        margin-top: 0;
+    }
+
+    @include mq('small-desktop') {
+        margin-bottom: 175px;
+    }
+
+    @include mq('desktop') {
+        padding: 35px 0;
+    }
+}

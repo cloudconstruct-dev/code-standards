@@ -1,0 +1,343 @@
+@import "_variables";
+@import "_mixins";
+
+.navigationSidebar {
+    position: relative;
+
+    color: $color-sidebar-gray;
+
+    @include mq('tablet') {
+        height: 100vh;
+        width: 30%;
+    }
+
+    @include mq('small-desktop') {
+        
+    }
+
+    h2 {
+        margin-bottom: 0;
+        padding-right: 20px;
+        
+        color: $color-blue;
+
+        @include mq('small-desktop') {
+            padding-right: 40px;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+
+        text-align: right;
+
+        @include mq('tablet', max) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: 1;
+
+            height: 0;
+
+            background-color: $color-red;
+
+            @include prefix(transition, all 800ms ease, webkit moz ms o);
+
+            .navigationSidebar__navList,
+            h2 {
+                opacity: 0;
+                @include prefix(transition, all 800ms ease, webkit moz ms o);
+            }
+
+            &.open {
+                padding-top: 65px;
+                height: 100%;
+
+                .navigationSidebar__navList,
+                h2 {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include mq('tablet') {
+            position: fixed;
+            top: 50%;
+            right: 0;
+
+            width: 30%;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &__navList {
+        padding: 0;
+        margin: 0;
+        
+        list-style-type: none;
+    }
+
+    &__navListItem {
+        padding-right: 20px;
+
+        &.active {
+            .navigationSidebar__navListItemLink {
+                color: $color-blue;
+            }
+        }
+
+        @include mq('small-desktop') {
+            padding-right: 40px;
+        }
+    }
+
+    &__navListItemLink {
+        display: block;
+
+        width: 100%;
+        padding: 3px 0;
+
+        color: $color-sidebar-gray;        
+
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 1;
+        text-transform: uppercase;
+        @extend .roboto-cnd-bold;
+
+        @include prefix(transition, all 200ms ease, webkit moz ms o);
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-blue;  
+        }
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
+
+        @include mq('small-desktop') {
+            padding: 4px 0;
+
+            font-size: 20px;
+        }
+
+        @include mq('desktop') {
+            padding: 3px 0;
+
+            font-size: 23px;
+        }
+
+        @include mq('desktop-wide') {
+            font-size: 26px;
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @include mq('tablet') {
+            position: fixed;
+            top: 0;
+            right: 20px;
+            display: block;
+
+            margin-top: 10px;
+            height: 9vh;
+            width: 30%;
+
+            text-align: right;
+
+            svg {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        @include mq('small-desktop') {
+            right: 40px;
+        }
+
+        @include mq('desktop') {
+            top: 35px;
+        }
+    }
+
+    &__navSquare {
+        display: none;
+
+        @include mq('tablet') {
+            position: absolute;
+            top: 37px;
+            right: -112px;
+            z-index: -3;
+            display: block;
+    
+            width: 300px;
+            height: 300px;
+    
+            background-color: $color-red;
+    
+            transform: rotate(30deg);
+        }
+
+
+        @include mq('small-desktop') {
+            top: 75px;
+            right: -160px;
+
+            width: 400px;
+            height: 400px;
+        }
+
+        @include mq('desktop') {
+            top: 60px;
+            right: -165px;
+
+            width: 450px;
+            height: 450px;
+        }
+
+        @include mq('desktop-wide') {
+            right: -165px;
+
+            width: 450px;
+            height: 450px;
+        }
+    }
+
+    &__toggleLogo {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+
+        svg {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    &__toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        width: 100%;
+        height: 50px;
+
+        background-color: $color-red;
+
+        @include mq('tablet') {
+            display: none;
+        }
+
+        span {
+            display:block;
+            background:$color-white;
+            border-radius:2px;
+
+            transition:.25s ease-in-out;
+            box-sizing:border-box;
+        }
+          
+        #menu-toggle {
+            width:50px;
+            height:50px;
+            margin: 0 auto;
+            position:relative;
+            cursor:pointer;
+
+            #hamburger {
+                position:absolute;
+                height:100%;
+                width:100%;
+
+                span {
+                    width: 50px;
+                    height: 4px;
+                    position:relative;
+                    top: 3px;
+                    left: 0;
+                    margin: 8px 0;
+
+                    &:nth-child(1){
+                        transition-delay:.5s;
+                    }
+
+                    &:nth-child(2){
+                        transition-delay:.625s;
+                    }
+
+                    &:nth-child(3){
+                        transition-delay:.75s;
+                    }
+                }
+            }
+            #cross {
+                position:absolute;
+                height:100%;
+                width:100%;
+                transform:rotate(45deg);
+                span{
+
+                    &:nth-child(1){
+                        height:0%;
+                        width:4px;
+                        position:absolute;
+                        top:10%;
+                        left:23px;
+                        transition-delay:0s;
+                    }
+
+                    &:nth-child(2){
+                        width:0%;
+                        height:4px;
+                        position:absolute;
+                        left:10%;
+                        top:23px;
+                        transition-delay:.25s;
+                    }
+                }
+            }
+        }
+            
+        #menu-toggle.open {
+            #hamburger {
+                span {
+                    width:0%;
+
+                    &:nth-child(1){
+                        transition-delay:0s;
+                    }
+
+                    &:nth-child(2){
+                        transition-delay:.125s;
+                    }
+
+                    &:nth-child(3){
+                        transition-delay:.25s;
+                    }
+                }
+            }
+            #cross {
+                span {
+                    &:nth-child(1){
+                        height:80%;
+                        transition-delay:.625s;
+                    }
+                }
+                span {
+                    &:nth-child(2){
+                        width:80%;
+                        transition-delay:.375s;
+                    }
+                }    
+            }
+        }
+    }
+}

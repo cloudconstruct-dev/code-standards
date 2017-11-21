@@ -1,0 +1,206 @@
+@import "_variables";
+@import "_mixins";
+
+body {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: $color-background-gray;
+    color: $color-gray;
+
+    font-family: 'Roboto', sans-serif;
+
+    box-sizing: border-box;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.mainContent {
+    @include flexbox();
+    @include prefix(flex-wrap, wrap, webkit moz ms o);
+
+    &__wrapper {
+        @include flexbox();
+        @include prefix(justify-content, space-between, webkit moz ms o);
+        flex-wrap: wrap;
+        overflow: hidden;
+        position: relative;
+    }
+
+    @include mq('tablet') {
+        width: 70%;
+    }
+
+    @include mq('small-desktop') {
+
+    }
+}
+
+///////////////////////////////////////////
+// Topic styles
+
+.topic {
+    float: left;
+
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-top: 70px;
+    
+    @include mq('tablet') { 
+        padding-right: 25px;
+        padding-left: 50px;
+        padding-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    @include mq('desktop') {
+        padding-right: 40px;
+        padding-left: 80px;
+    }
+
+    &__title {
+        float: left;
+
+        width: 100%;
+    }
+
+    &__content {
+        float: left;
+
+        width: 100%;
+
+        @include mq('small-desktop') {
+            width: 70%;
+            margin-right: 5%;
+        }
+    }
+
+    &__resources {
+        position: relative;
+        float: left;
+
+        width: 100%;
+        padding: 15px;
+        
+        background-color: $color-light-gray;
+
+        @include mq('small-desktop') {
+            width: 25%;
+        }
+    }
+
+    &__resourcesList {
+        position: relative;
+        z-index: 1;
+
+        margin: 0 0 0 25px;
+        padding: 0;
+        
+        list-style-type: none;
+    }
+
+    &__resourcesListItem {
+        position: relative;
+
+        margin-bottom: 10px;
+
+        @include mq('tablet') {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -25px;
+
+            color: $color-red;
+
+            @extend .ss-gizmo;
+            
+            content: '🔗';
+        }
+
+        a {
+            word-break: break-all;
+        }
+        
+    }
+
+    &__code {
+        width: 100%;
+        margin: 0 0 20px 0; 
+
+        @include mq('tablet') {
+            margin: 0 0 30px 0; 
+            
+            font-size: 16px;
+        }
+    }
+
+    &__codeSnippet {
+        width: 100%;
+        margin: 0 0 5px 0;
+
+        text-align: right;
+        @extend .roboto-italic;
+        font-size: 14px;
+        line-height: 1;
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
+    }
+
+    &__codeWrap {
+        width: 100%;
+        margin: 0;
+
+        border: 2px dashed $color-red;
+    }
+
+    &__codePre {
+        padding: 15px 20px;
+        margin: 0;
+        width: 100%;
+
+        background-color: $color-white;
+        box-sizing: border-box;
+
+        white-space: nowrap;
+    }
+
+    &__codeType {
+        width: 100%;
+        margin: 0;
+        padding: 0 5px;
+
+        background-color: $color-light-gray;
+        color: $color-blue;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__codeContent {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        color: $color-blue;
+        box-sizing: border-box;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: pre-wrap;
+    }
+    
+}
