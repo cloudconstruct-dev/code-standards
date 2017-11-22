@@ -47,6 +47,12 @@ div {
   padding-right: 30px;
   padding-bottom: 15px;
   padding-top: 70px; }
+  .topic.come-in .topic__title h2, .topic.already-visible .topic__title h2 {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
   @media only screen and (min-width: 768px) {
     .topic {
       padding-right: 25px;
@@ -58,8 +64,27 @@ div {
       padding-right: 40px;
       padding-left: 80px; } }
   .topic__title {
+    margin: 0 0 15px 0;
     float: left;
+    overflow: hidden;
     width: 100%; }
+    .topic__title h2 {
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -o-transform: translateY(100%);
+      transform: translateY(100%);
+      -webkit-transition: all 600ms ease 400ms;
+      -moz-transition: all 600ms ease 400ms;
+      -ms-transition: all 600ms ease 400ms;
+      -o-transition: all 600ms ease 400ms;
+      transition: all 600ms ease 400ms; }
+    @media only screen and (min-width: 768px) {
+      .topic__title {
+        margin: 0 0 20px 0; } }
+    @media only screen and (min-width: 992px) {
+      .topic__title {
+        margin: 0 0 30px 0; } }
   .topic__content {
     float: left;
     width: 100%; }
@@ -321,19 +346,17 @@ h1 {
         font-size: 48px; } }
 
 h2 {
-  margin: 0 0 15px 0;
+  margin: 0;
   color: #e01932;
   font-size: 28px;
   line-height: 34px;
   text-transform: uppercase; }
   @media only screen and (min-width: 768px) {
     h2 {
-      margin: 0 0 20px 0;
       font-size: 24px;
       line-height: 30px; } }
   @media only screen and (min-width: 992px) {
     h2 {
-      margin: 0 0 30px 0;
       font-size: 30px;
       line-height: 36px; } }
   @media only screen and (min-width: 992px) {
