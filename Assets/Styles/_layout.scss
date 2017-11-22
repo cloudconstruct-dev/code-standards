@@ -51,15 +51,6 @@ div {
     padding-right: 30px;
     padding-bottom: 15px;
     padding-top: 70px;
-
-    &.come-in,
-    &.already-visible {
-        .topic__title {
-            h2 {
-                @include prefix(transform, translateY(0), webkit moz ms o);
-            }
-        }
-    }
     
     @include mq('tablet') { 
         padding-right: 25px;
@@ -79,12 +70,7 @@ div {
         float: left;
         overflow: hidden;
 
-        width: 100%;
-
-        h2 {
-            @include prefix(transform, translateY(100%), webkit moz ms o);
-            @include prefix(transition, all 600ms ease 400ms, webkit moz ms o);
-        }
+        width: 100%;   
 
         @include mq('tablet') {
             margin: 0 0 20px 0;
@@ -109,9 +95,9 @@ div {
     &__resources {
         position: relative;
         float: left;
+        overflow: hidden;
 
         width: 100%;
-        padding: 15px;
         
         background-color: $color-light-gray;
 

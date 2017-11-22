@@ -1,0 +1,181 @@
+@import "_variables";
+@import "_mixins";
+
+// Topic Animations
+
+.topic {
+
+    &__title {
+        h2 {
+            @include prefix(transform, translateY(100%), webkit moz ms o);
+            @include prefix(transition, all 600ms ease 400ms, webkit moz ms o);
+        }
+    }
+
+    &__content {
+        opacity: 0;
+
+        @include prefix(transform, translateY(50px), webkit moz ms o);
+        @include prefix(transition, all 600ms ease 600ms, webkit moz ms o);
+    }
+
+    &__resources {
+        padding: 0 15px;
+        max-height: 0;
+
+        @include prefix(transition, all 600ms ease 1000ms, webkit moz ms o);
+    }
+
+    &.come-in,
+    &.already-visible {
+        
+        // Title Animations
+        .topic__title {
+            h2 {
+                @include prefix(transform, translateY(0), webkit moz ms o);
+            }
+        }
+
+        // Content Animations
+        .topic__content {
+            opacity: 1;
+            
+            @include prefix(transform, translateY(0), webkit moz ms o);
+        }
+
+        // Resources Animations
+        .topic__resources {
+            max-height: 100%;
+            padding: 15px;
+        }
+    }
+}
+
+.navigationSidebar__nav {
+
+    h2 {
+        @include prefix(transform, translateX(100%), webkit moz ms o);
+        @include prefix(transition, all 800ms ease 300ms, webkit moz ms o);
+    }
+
+    &ListItem {
+        @include prefix(transform, translateX(100%), webkit moz ms o);
+        @include prefix(transition, all 800ms ease, webkit moz ms o);
+
+        &:nth-child(1) {
+            @include prefix(transition-delay, 1000ms, webkit moz ms o);
+        }
+        &:nth-child(2) {
+            @include prefix(transition-delay, 1050ms, webkit moz ms o);
+        }
+        &:nth-child(3) {
+            @include prefix(transition-delay, 1100ms, webkit moz ms o);
+        }
+        &:nth-child(4) {
+            @include prefix(transition-delay, 1150ms, webkit moz ms o);
+        }
+        &:nth-child(5) {
+            @include prefix(transition-delay, 1200ms, webkit moz ms o);
+        }
+        &:nth-child(6) {
+            @include prefix(transition-delay, 1250ms, webkit moz ms o);
+        }
+        &:nth-child(7) {
+            @include prefix(transition-delay, 1300ms, webkit moz ms o);
+        }
+        &:nth-child(8) {
+            @include prefix(transition-delay, 1350ms, webkit moz ms o);
+        }
+        &:nth-child(9) {
+            @include prefix(transition-delay, 1400ms, webkit moz ms o);
+        }
+        &:nth-child(10) {
+            @include prefix(transition-delay, 1450ms, webkit moz ms o);
+        }
+        &:nth-child(11) {
+            @include prefix(transition-delay, 1500ms, webkit moz ms o);
+        }
+        &:nth-child(12) {
+            @include prefix(transition-delay, 1550ms, webkit moz ms o);
+        }
+        &:nth-child(13) {
+            @include prefix(transition-delay, 1600ms, webkit moz ms o);
+        }
+        &:nth-child(14) {
+            @include prefix(transition-delay, 1650ms, webkit moz ms o);
+        }
+        &:nth-child(15) {
+            @include prefix(transition-delay, 1700ms, webkit moz ms o);
+        }
+        &:nth-child(16) {
+            @include prefix(transition-delay, 1750ms, webkit moz ms o);
+        }
+        &:nth-child(17) {
+            @include prefix(transition-delay, 1800ms, webkit moz ms o);
+        }
+        &:nth-child(18) {
+            @include prefix(transition-delay, 1850ms, webkit moz ms o);
+        }
+        &:nth-child(19) {
+            @include prefix(transition-delay, 1900ms, webkit moz ms o);
+        }
+        &:nth-child(20) {
+            @include prefix(transition-delay, 1950ms, webkit moz ms o);
+        }
+        &:nth-child(21) {
+            @include prefix(transition-delay, 2000ms, webkit moz ms o);
+        }
+        &:nth-child(22) {
+            @include prefix(transition-delay, 2050ms, webkit moz ms o);
+        }
+        &:nth-child(23) {
+            @include prefix(transition-delay, 2100ms, webkit moz ms o);
+        }
+        &:nth-child(24) {
+            @include prefix(transition-delay, 2150ms, webkit moz ms o);
+        }
+        &:nth-child(25) {
+            @include prefix(transition-delay, 2200ms, webkit moz ms o);
+        }
+    }
+
+    &Square {
+        @include prefix(transform, translateX(100%) rotate(30deg), webkit moz ms o);
+        @include prefix(transition, all 800ms ease, webkit moz ms o);
+    }
+
+    &.come-in,
+    &.already-visible {
+        h2 {
+            @include prefix(transform, translateX(0), webkit moz ms o);
+        }
+
+        .navigationSidebar__navListItem {
+            @include prefix(transform, translateX(0), webkit moz ms o);
+        }
+
+        .navigationSidebar__navSquare {
+            @include prefix(transform, translateX(0) rotate(30deg), webkit moz ms o);
+        }
+    }
+}
+
+.header {
+    &__topSquare {
+        @include prefix(transform, translateY(-100%) rotate(-8deg), webkit moz ms o);
+        @include prefix(transition, all 800ms ease, webkit moz ms o);
+    }
+
+    &.come-in,
+    &.already-visible {
+        .header__topSquare {
+            @include prefix(transform, translateY(0) rotate(-8deg), webkit moz ms o);
+        }
+    }
+}
+
+
+
+
+
+

@@ -60,7 +60,7 @@
 
         background-color: $color-blue;
 
-        transform: rotate(-8deg);
+        @include prefix(transform, rotate(-8deg), webkit moz ms o);
 
         @include mq('small-desktop') {
             top: -145px;
@@ -78,7 +78,7 @@
         height: 75px;
         width: 75px;
 
-        transform: rotate(-10deg);
+        @include prefix(transform, rotate(-10deg), webkit moz ms o);
 
         @include mq('tablet') {
             top: -10px;
