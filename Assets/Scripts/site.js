@@ -67,9 +67,9 @@ $(document).ready(function(){
     
         var win = $(window);
     
-        var $topic = $(".topic");
+        var $animated = $(".animated");
     
-        $topic.each(function (i, el) {
+        $animated.each(function (i, el) {
             var el = $(el);
             if (el.visible(true)) {
                 el.addClass("already-visible");
@@ -77,7 +77,7 @@ $(document).ready(function(){
         });
     
         win.scroll(function (event) {
-            $topic.each(function (i, el) {
+            $animated.each(function (i, el) {
                 var el = $(el);
                 if (el.visible(true)) {
                     el.addClass("come-in");
