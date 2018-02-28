@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     webserver = require("gulp-webserver"),
     sourcemaps = require("gulp-sourcemaps"),
     concat = require("gulp-concat"),
-    sass = require("gulp-sass");
+    sass = require("gulp-sass"),
+    cleanCSS = require("gulp-clean-css");
 
 
 // JS
@@ -24,6 +25,14 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./Assets/dist/css/'));
 });
 
+// Minify CSS
+gulp.task('minify-css', () => {
+    return gulp.src('./Assets/dist/css/*.css')
+      .pipe(sourcemaps.init())
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('.'));
+  });
 
 // local server for dev
 gulp.task('serve', function() {
@@ -37,10 +46,10 @@ gulp.task('serve', function() {
 
 
 // Watchers
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     gulp.watch([
         './Assets/Styles/*.scss'
-    ], ['sass']);
+    ], ['sass', 'minify-css']);
     gulp.watch([
         './Assets/scripts/*.js'
     ], ['js']);    
@@ -48,5 +57,5 @@ gulp.task('watch', function () {
 
 
 
-gulp.task('default', ['sass', 'js', 'serve', 'watch']);
+gulp.task('default', ['sass', 'js', 'minify-css', 'serve', 'watch']);
 

@@ -292,8 +292,8 @@ div {
 
 @font-face {
   font-family: "SSGizmo";
-  src: url("Assets/Fonts/ss-gizmo.eot");
-  src: url("Assets/Fonts/ss-gizmo.eot?#iefix") format("embedded-opentype"), url("Assets/Fonts/ss-gizmo.woff") format("woff"), url("Assets/Fonts/ss-gizmo.ttf") format("truetype"), url("Assets/Fonts/ss-gizmo.svg#SSGizmo") format("svg");
+  src: url("../../Fonts/ss-gizmo.eot");
+  src: url("../../Fonts/ss-gizmo.eot?#iefix") format("embedded-opentype"), url("../../Fonts/ss-gizmo.woff") format("woff"), url("../../Fonts/ss-gizmo.ttf") format("truetype"), url("../../Fonts/ss-gizmo.svg#SSGizmo") format("svg");
   font-weight: normal;
   font-style: normal; }
 
