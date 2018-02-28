@@ -296,6 +296,7 @@ div {
   src: url("Assets/Fonts/ss-gizmo.eot?#iefix") format("embedded-opentype"), url("Assets/Fonts/ss-gizmo.woff") format("woff"), url("Assets/Fonts/ss-gizmo.ttf") format("truetype"), url("Assets/Fonts/ss-gizmo.svg#SSGizmo") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 .ss-gizmo, .topic__resourcesListItem:before {
   font-family: "SSGizmo";
   font-style: normal;
@@ -734,6 +735,7 @@ a {
   -ms-transition: all 600ms ease 400ms;
   -o-transition: all 600ms ease 400ms;
   transition: all 600ms ease 400ms; }
+
 .topic__content {
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -746,6 +748,7 @@ a {
   -ms-transition: all 600ms ease 600ms;
   -o-transition: all 600ms ease 600ms;
   transition: all 600ms ease 600ms; }
+
 .topic__resources {
   padding: 0 15px;
   max-height: 0;
@@ -754,12 +757,14 @@ a {
   -ms-transition: all 600ms ease 1000ms;
   -o-transition: all 600ms ease 1000ms;
   transition: all 600ms ease 1000ms; }
+
 .topic.come-in .topic__title h2, .topic.already-visible .topic__title h2 {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
+
 .topic.come-in .topic__content, .topic.already-visible .topic__content {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -767,6 +772,7 @@ a {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
+
 .topic.come-in .topic__resources, .topic.already-visible .topic__resources {
   max-height: 100%;
   padding: 15px; }
@@ -782,6 +788,7 @@ a {
   -ms-transition: all 800ms ease 300ms;
   -o-transition: all 800ms ease 300ms;
   transition: all 800ms ease 300ms; }
+
 .navigationSidebar__navListItem {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
@@ -943,6 +950,7 @@ a {
     -ms-transition-delay: 2200ms;
     -o-transition-delay: 2200ms;
     transition-delay: 2200ms; }
+
 .navigationSidebar__navSquare {
   -webkit-transform: translateX(100%) rotate(30deg);
   -moz-transform: translateX(100%) rotate(30deg);
@@ -954,18 +962,21 @@ a {
   -ms-transition: all 800ms ease;
   -o-transition: all 800ms ease;
   transition: all 800ms ease; }
+
 .navigationSidebar__nav.come-in h2, .navigationSidebar__nav.already-visible h2 {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0); }
+
 .navigationSidebar__nav.come-in .navigationSidebar__navListItem, .navigationSidebar__nav.already-visible .navigationSidebar__navListItem {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0); }
+
 .navigationSidebar__nav.come-in .navigationSidebar__navSquare, .navigationSidebar__nav.already-visible .navigationSidebar__navSquare {
   -webkit-transform: translateX(0) rotate(30deg);
   -moz-transform: translateX(0) rotate(30deg);
@@ -984,6 +995,7 @@ a {
   -ms-transition: all 800ms ease;
   -o-transition: all 800ms ease;
   transition: all 800ms ease; }
+
 .header__title, .header__updated {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
@@ -996,12 +1008,14 @@ a {
   -o-transition: all 800ms ease 600ms;
   transition: all 800ms ease 600ms;
   opacity: 0; }
+
 .header.come-in .header__topSquare, .header.already-visible .header__topSquare {
   -webkit-transform: translateY(0) rotate(-8deg);
   -moz-transform: translateY(0) rotate(-8deg);
   -ms-transform: translateY(0) rotate(-8deg);
   -o-transform: translateY(0) rotate(-8deg);
   transform: translateY(0) rotate(-8deg); }
+
 .header.come-in .header__title,
 .header.come-in .header__updated, .header.already-visible .header__title,
 .header.already-visible .header__updated {
@@ -1030,4 +1044,4 @@ a {
     -o-transform: translateY(0);
     transform: translateY(0); }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=general.css.map */

@@ -95,9 +95,8 @@
     }
 
     &__navListItemLink {
-        display: block;
+        display: inline-block;
 
-        width: 100%;
         padding: 3px 0;
 
         color: $color-sidebar-gray;        

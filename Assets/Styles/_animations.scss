@@ -166,14 +166,36 @@
         @include prefix(transition, all 800ms ease, webkit moz ms o);
     }
 
+    &__title,
+    &__updated {
+        @include prefix(transform, translateY(-100%), webkit moz ms o);
+        @include prefix(transition, all 800ms ease 600ms, webkit moz ms o);
+        opacity: 0;
+    }
+
     &.come-in,
     &.already-visible {
         .header__topSquare {
             @include prefix(transform, translateY(0) rotate(-8deg), webkit moz ms o);
         }
+
+        .header__title,
+        .header__updated {
+            @include prefix(transform, translateY(0), webkit moz ms o);
+            opacity: 1;
+        }
     }
 }
 
+.navigationSidebar__toggle {
+    @include prefix(transform, translateY(-100%), webkit moz ms o);
+    @include prefix(transition, all 800ms ease 800ms, webkit moz ms o);
+
+    &.come-in,
+    &.already-visible {
+        @include prefix(transform, translateY(0), webkit moz ms o);
+    }
+}
 
 
 
