@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     sourcemaps = require("gulp-sourcemaps"),
     concat = require("gulp-concat"),
     sass = require("gulp-sass"),
+    autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require("gulp-clean-css");
 
 
@@ -21,6 +22,10 @@ gulp.task('sass', function() {
     return gulp.src(['./Assets/Styles/general.scss'])
         .pipe(sourcemaps.init())
             .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./Assets/dist/css/'));
 });

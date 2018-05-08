@@ -55,8 +55,7 @@ div {
     @include mq('tablet') { 
         padding-right: 25px;
         padding-left: 50px;
-        padding-top: 35px;
-        margin-bottom: 35px;
+        padding-top: 70px;
     }
 
     @include mq('desktop') {

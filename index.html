@@ -49,8 +49,23 @@
                     </h1>
                 </div>
                 <div class="header__updated">
+                    <!-- /////////////////////////////////////////// -->
+                    <!-- Previous Updates -->
+
                     <!-- Updated 11/27/17 by AC-->
-                    <p>Updated 11/27/17</p>
+                    <!--<p>Updated 11/27/17</p>-->
+
+                    <!-- End of previous Updates -->
+                    <!-- /////////////////////////////////////////// -->
+
+                    <!-- /////////////////////////////////////////// -->
+                    <!-- Current Latest Update -->
+
+                    <!-- Updated 5/8/18 by AC-->
+                    <p>Updated 5/8/18</p>
+                    
+                    <!-- End of current latest Update -->
+                    <!-- /////////////////////////////////////////// -->
                 </div>
                 <canvas class="header__topSquare">
                 </canvas>
@@ -124,7 +139,15 @@ body {
                 </div>
                 <div class="topic__content">
                     <ol>
-                        <li>Readability and ease of understanding code across all concerns—HTML, CSS and JS. Always name objects/vars/files with clear, meaningful strings.  Be verbose and comment a LOT—let minification in the build process shrink build output to performant.  drop TODO's liberally in all code.  sign comments whenever possible for reference/trail.  front-end source code should be UNDERSTANDABLE above all else.  If you don't adhere to popular conventions for structure of code, at least create clear conventions in a project, and stick with them consistently across the project.</li>
+                        <li>Readability and ease of understanding code across all concerns</li>
+                        <ul>
+                            <li>HTML, CSS and JS. Always name objects/vars/files with clear, meaningful strings.</li>
+                            <li>Be verbose and comment a LOT—let minification in the build process shrink build output to performant.</li>
+                            <li>Drop TODO's liberally in all code.</li>
+                            <li>Sign comments whenever possible for reference/trail.</li>
+                            <li>Front-end source code should be UNDERSTANDABLE above all else. If you don't adhere to popular conventions for structure
+                                of code, at least create clear conventions in a project, and stick with them consistently across the project.</li>
+                        </ul>
                         <li>Organization of source files and build output into clear structure, that matches architecture of a web application or website architecture.</li>
                         <li>Adherence to the best practices outlined in this document, so that teams are sync'd and development is faster due to common practices.</li>
                         <li>Use of these basic principles across any technology stack—the basics are valid anywhere.</li>
@@ -133,6 +156,7 @@ body {
                 <!--<div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
                     </ul>
                 </div>-->
             </div>
@@ -154,7 +178,9 @@ body {
                 <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                            <li class="topic__resourcesListItem"><a href="https://www.sitepoint.com/introduction-html5-boilerplate/" target="_blank">https://www.sitepoint.com/introduction-html5-boilerplate/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.sitepoint.com/introduction-html5-boilerplate/" target="_blank">https://www.sitepoint.com/introduction-html5-boilerplate/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://gtmetrix.com/why-use-a-cdn.html" target="_blank">https://gtmetrix.com/why-use-a-cdn.html</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.giftofspeed.com/fewer-http-requests/" target="_blank">https://www.giftofspeed.com/fewer-http-requests/</a></li>
                     </ul>
                 </div>
             </div>
@@ -187,49 +213,388 @@ body {
                 </div>
             </div>
 
-            <!-- Accessibility -->
-            <div class="topic animated" id="accessibility">
+            <!-- Googlebot -->
+            <div class="topic animated" id="googlebot">
                 <div class="topic__title">
-                    <h2>General Practices for Accessibility</h2>
+                    <h2>General Practices to Ensure Googlebot is Happy</h2>
                 </div>
                 <div class="topic__content">
                     <ul>
-                        <li>Provide text alternatives for non-text content</li>
-                            <ul>
-                                <li>Using aria-label to provide labels for objects</li>
-                                <li>Using aria-labelledby to provide a text alternative for non-text content</li>
-                                <li>Using alt attributes on img elements</li>
-                            </ul>
-                        <li>Make all functionality available from a keyboard</li>
-                        <li>Give users enough time to read and use content</li>
-                        <li>Do not use content that causes seizures</li>
-                        <li>Organize documents so they can be read without stylesheets</li>
+                        <li>Make sure the site is crawlable when necessary</li>
+                        <li>Make sure that Googlebot can “see” all the site’s pages</li>
+                        <li>Make sure Googlebot can access all content and links completely </li>
+                        <li>Make sure Googlebot can access all of my page resources</li>
                     </ul>
                 </div>
                 <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/intro/wcag" target="_blank">https://www.w3.org/WAI/intro/wcag</a></li>
-                        <li class="topic__resourcesListItem"><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank">https://www.wuhcag.com/wcag-checklist/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://varvy.com/googlebot.html" target="_blank">https://varvy.com/googlebot.html</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://support.google.com/webmasters/answer/182072?hl=en" target="_blank">https://support.google.com/webmasters/answer/182072?hl=en</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://support.google.com/webmasters/answer/1061943?hl=en" target="_blank">https://support.google.com/webmasters/answer/1061943?hl=en</a></li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="topic animated" id="imageContent">
+                <div class="topic__title">
+                    <h2>Image Content in Web Pages</h2>
+                </div>
+                <div class="topic__content">
+                    <h4>File Size</h4>
+                    <p>Appropriate compression-to-quality ratio to optimize file size, for delivery in less-than-ideal wireless networks circumstances—aim to make mobile experience fast.</p>
+                    <p>Try to keep file sizes for images under 500kb if possible. Larger images may exceed but we should try to keep them lower. Average file size should be around 200 – 350kb.</p>
+                    <h4>Retina-Ready Images</h4>
+                    <p>client/project-specific utilization of Retina-ready images—we don’t always do it, but here’s how if the project dictates it</p>
+                    <ul>
+                        <li>Utilization of sprites at the least, for anything that’s not content imagery—all icons, page design elements and concerns that are not actual content imagery should be served up as text-encoded SVG, PNG assets included as data-uri, inline in markup or in CSS</li>
+                    </ul>
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- HTML Markup -->
+            <div class="topic animated" id="htmlMarkup">
+                <div class="topic__title">
+                    <h2>HTML Markup</h2>
+                </div>
+                <div class="topic__content">
+                    <ul>
+                        <li>Write valid HTML5 and try to validate it if any doubt—great way to catch required attributes omitted or other issues that could adversely affect page crawlability/ranking or accessibility. *can test here: <a href="https://validator.w3.org/#validate_by_uri" target="_blank">https://validator.w3.org/#validate_by_uri</a></li>
+                        <li>Indentation - Use of 4 spaces or tab as indentation</li>
+                        <li>Semantic, well-structured HTML5 markup</li>
+                        <ul>
+                            <li>Pay attention to both what elements are being used and whether they match the W3C’s intended purpose</li>
+                            <li>Use section and h elements to create a structured document, easily navigable by humans of any physical capability and robots as well (test with “outline” browser add-on - <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)" target="_blank">https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)</a></li>
+                        </ul>
+                        <li>Minimalist — use as few elements as possible to accomplish a layout, always default to placing and positioning actual semantic elements instead of wrapper divs, etc, whenever possible</li>
+                        <li>Id’s vs class attributes for referencing DOM elements</li>
+                    </ul>
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Semantic Markup -->
+            <div class="topic animated" id="semanticMarkup">
+                <div class="topic__title">
+                    <h2>Semantic Markup/ machine-readable markup structure</h2>
+                </div>
+                <div class="topic__content">
+                    <h4>Definition</h4>
+                    <ol>
+                        <li>Semantic markup requires that HTML elements be used according to their intended purpose.</li>
+                        <li>Semantic markup requires the separation of content and presentation.</li>
+                    </ol>
+                    <p>When writing semantic markup, we use HTML tags to tell browsers something about the contents of the element. In semantic markup, tags are no longer just a way to get content to show up on a web page in a human-readable format. The tags themselves become a way to tell a machine (whether a browser, a computer, a smartphone, or another smart device) something about the meaning of the content. To write semantic markup, we must use HTML tags correctly so that our markup is both human-readable and machine-readable. (Courtesy of <a href="https://html.com/semantic-markup/" target="_blank">https://html.com/semantic-markup/</a>)</p>
+                    <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+                    <h4>Examples</h4>
+                    <p>Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content.</p>
+                    <p>Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.</p>
+                    <h4>HTML5 semantic elements</h4>
+                    <ul>
+                        <li>&lt;article&gt;</li>
+                        <li>&lt;aside&gt;</li>
+                        <li>&lt;details&gt;</li>
+                        <li>&lt;figcaption&gt;</li>
+                        <li>&lt;figure&gt;</li>
+                        <li>&lt;footer&gt;</li>
+                        <li>&lt;header&gt;</li>
+                        <li>&lt;main&gt;</li>
+                        <li>&lt;mark&gt;</li>
+                        <li>&lt;nav&gt;</li>
+                        <li>&lt;section&gt;</li>
+                        <li>&lt;summary&gt;</li>
+                        <li>&lt;time&gt;</li>
+                    </ul>
+                    <h4>Definitions</h4>
+                    <ul>
+                        <li><strong>header</strong>: A container to be used for a web page header which typically contains the site logo, heading elements, and site navigation.</li>
+                        <li><strong>footer</strong>: A container to be used for a web page footer which typically contains authorship, contact, and copyright information in addition to navigational links and a link back to the top of the web page.</li>
+                        <li><strong>main</strong>: A high-level element used to contain all of the content that is unique to a single web page and not repeated across multiple web pages.</li>
+                        <li><strong>nav</strong>: An element to contain blocks of site navigation links. This element is typically placed in the page header and footer, and may also be used in an aside (sidebar) element as well.</li>
+                        <li><strong>section</strong>: The section element is used to mark off sections of a document, such as chapters or major sections of a long form post.</li>
+                        <li><strong>aside</strong>: Use to identify content that is related to the main content on the page but not part of the primary flow of the document. For example, the aside element may contain a glossary definition of a term that appears in a blog post or it may contain advertisements related to the contents of the page.</li>
+                        <li><strong>article</strong>: The article element is used to identify a block of content suitable for reuse and syndication in other settings, such as a blog post or technical article.</li>
+                    </ul>
+
+                </div>
+                <div class="topic__resources">
+                    <h5>Resources:</h5>
+                        <ul class="topic__resourcesList">
+                            <li class="topic__resourcesListItem"><a href="https://html.com/semantic-markup/" target="_blank">https://html.com/semantic-markup/</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UI Frameworks -->
+            <div class="topic animated" id="uiFrameworks">
+                <div class="topic__title">
+                    <h2>UI Frameworks</h2>
+                </div>
+                <div class="topic__content">
+                    <ul>
+                        <li>Bootstrap — we almost always use it, but make a smart decision.  we don’t HAVE to use it. (Current version - 4)</li>
+                        <li>Limit framework assets to custom builds that only include the exact modules needed.</li>
+                        <ul>
+                            <li>Start this way at the scaffolding of a project by beginning with a minimal build of bootstrap jquery, etc, then BUILD on it as is required during the unfolding of the front-end build.</li>
+                            <li>Better to start clean and build than try to weed out what is not needed after a kitchen-sink start.</li>
+                        </ul>
+                        <li>Always think about utilizing frameworks to speed development, but temper if wise with performance concerns.</li>
+                    </ul>
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- UI Styling -->
+            <div class="topic animated" id="uiStyling">
+                <div class="topic__title">
+                    <h2>UI Styling</h2>
+                </div>
+                <div class="topic__content">
+                    <ul>
+                        <li>Again, readability and understandability</li>
+                        <li>Attention to selector complexity — keep selectors light via BEM conventions and limiting nesting in SASS to ensure light selectors in the browser</li>
+                        <li>ALWAYS utilize BEM basics for creating CSS classes</li>
+                        <li>Always target CLASSES and not object ID’s for styling</li>
+                        <li>Use an “order-by-type” methodology as follows (order of the actual properties within the grouping isn’t as important)</li>
+                        <ul>
+                            <li>Layout Properties (position, float, clear, display, overflow, z-index)</li>
+                            <li>Box Model Properties (width, height, margin, padding)</li>
+                            <li>Visual Properties (color, background, border, box-shadow)</li>
+                            <li>Typography Properties (font-size, font-family, text-align, text-transform)</li>
+                            <li>Misc Properties (cursor, animations)</li>
+                        </ul>
+                        <div class="topic__code">
+                            <p class="topic__codeSnippet">code snippet</p>
+                            <div class="topic__codeWrap">
+                                <div class="topic__codeType">
+                                    <p>CSS/SCSS/LESS</p>
+                                </div><pre class="topic__codePre"><code class="topic__codeContent">.selector {
+    // Layout Properties
+    position:
+    float:
+    display:
+    overflow(y, x):
+    z-index:
+    top:
+    left:
+    bottom:
+    right:
+    clear:
+    flex(basis, direction, flow, grow, shrink, wrap):
+    align(content, items, self):
+    justify-content:
+    order:
+    columns:
+                                                
+    // Box Model Properties
+    width(max, min):
+    height(max, min):
+    margin(top, right, bottom, left):
+    padding(top, right, bottom, left):
+                                                
+    // Visual Properties
+    color:
+    background(image, size, position, color):
+    border(top, right, bottom, left, width, style, color):
+    border-radius(top, right, bottom, left):
+    border-spacing:
+    border-collapse:
+    box-shadow:
+    visibility:
+    vertical-align:
+                                            
+    // Type Properties
+    font-size:
+    font-family:
+    font-weight:
+    font-style:
+    text-align:
+    text-transform:
+    text-shadow:
+    text-decoration:
+    line-height:
+    letter-spacing:
+    white-space:
+    word-wrap:
+    word-break:
+    word-spacing:
+    list-style-type:
+                                                
+    // Misc Properties
+    cursor:
+    @keyframes:
+    animation:
+    animation-delay:
+    animation-direction:
+    animation-duration:
+    animation-name:
+    transform(origin, style):
+    transition(property, duration, timing-function, delay):
+    content:
+    outline(color, offset, style, width):
+    pointer-events:
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </ul>
+                    <h4>SASS — our default pre-processor</h4>
+                    <p>Why goes here</p>
+                    <h4>Formatting</h4>
+                    <p>Indentation of 4 spaces or 1 tab</p>
+                    <h4>Vendor Prefixes</h4>
+                    <p>Creating a Mixin to cover all prefixes (can we always do this?  we should look into using and always using Compass now that we are in SASS land)</p>
+                    <h4>Inline Styling</h4>
+                    <p>Don’t ever do it unless you have a dynamic UI component adding styles to an element on the fly that CAN’T be put into a dynamically added rule that resides fully in a stylesheet</p>
+                    <h4>Comments</h4>
+                    <p>Use of comments to separate Sections and Parts—again, understandability and verbose commenting as an overarching theme</p>
+                </div>
+                <div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.w3schools.com/css/css3_intro.asp" target="_blank">https://www.w3schools.com/css/css3_intro.asp</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://getbem.com/naming/" target="_blank">http://getbem.com/naming/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://sass-lang.com/" target="_blank">http://sass-lang.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://autoprefixer.github.io/" target="_blank">https://autoprefixer.github.io/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.thoughtco.com/css-vendor-prefixes-3466867" target="_blank">https://www.thoughtco.com/css-vendor-prefixes-3466867</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://caniuse.com/" target="_blank">https://caniuse.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://css3generator.com/" target="_blank">http://css3generator.com/</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Jquery Use -->
+            <div class="topic animated" id="jqueryUse">
+                <div class="topic__title">
+                    <h2>JQuery Use</h2>
+                </div>
+                <div class="topic__content">
+
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Javascript -->
+            <div class="topic animated" id="javascript">
+                <div class="topic__title">
+                    <h2>General Javascript Concerns</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Javascript Frameworks -->
+            <div class="topic animated" id="javascriptFrameworks">
+                <div class="topic__title">
+                    <h2>JavaScript Frameworks for SPA dev</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Component Based Architecture -->
+            <div class="topic animated" id="componentBasedArchitecture">
+                <div class="topic__title">
+                    <h2>Component-based Client-side Application Architecture</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Front-end Build Tooling -->
+            <div class="topic animated" id="buildTooling">
+                <div class="topic__title">
+                    <h2>Front-end Build Tooling</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Version Control -->
+            <div class="topic animated" id="versionControl">
+                <div class="topic__title">
+                    <h2>Version Control</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <!-- Responsive Web Design -->
+            <div class="topic animated" id="responsiveWebDesign">
+                <div class="topic__title">
+                    <h2>Responsive Web Design</h2>
+                </div>
+                <div class="topic__content">
+            
+                </div>
+                <!--<div class="topic__resources">
+                    <h5>Resources:</h5>
+                    <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                    </ul>
+                </div>-->
             </div>
 
             <!-- About Cloud -->
-            <div class="topic animated" id="aboutCloud">
-                <div class="topic__title">
-                    <h2>About Cloud Construct</h2>
-                </div>
-                <div class="topic__content">
-                    <p>Cloud Construct is a Boston-based web design and development firm that builds web applications, designs responsive and mobile-optimized websites, and creates software solutions that enable companies to do more, faster.</p>
-                    <h4>Design</h4>
-                    <p>We align user requirements and business objectives into user experience and visual design, and create compelling design across all digital interfaces.</p>
-                    <h4>Architect</h4>
-                    <p>Whether working on a new site or updating an existing one, our approach is to build smart the first time, with a structure that supports growth and future enhancements with ease.</p>
-                    <h4>Build</h4>
-                    <p>The development team draws on years of experience and stays up-to-date on the latest technologies. Our expertise is in engineering site features and functionality, and in creating structures that will provide long-term stability and security.</p>
-                </div>
-            </div>
             <div class="topic animated" id="aboutCloud">
                 <div class="topic__title">
                     <h2>About Cloud Construct</h2>
