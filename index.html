@@ -221,7 +221,7 @@ body {
                 <div class="topic__content">
                     <ul>
                         <li>Make sure the site is crawlable when necessary</li>
-                        <li>Make sure that Googlebot can “see” all the site’s pages</li>
+                        <li>Make sure that Googlebot can “see” all the site's pages</li>
                         <li>Make sure Googlebot can access all content and links completely </li>
                         <li>Make sure Googlebot can access all of my page resources</li>
                     </ul>
@@ -246,9 +246,9 @@ body {
                     <p>Appropriate compression-to-quality ratio to optimize file size, for delivery in less-than-ideal wireless networks circumstances—aim to make mobile experience fast.</p>
                     <p>Try to keep file sizes for images under 500kb if possible. Larger images may exceed but we should try to keep them lower. Average file size should be around 200 – 350kb.</p>
                     <h4>Retina-Ready Images</h4>
-                    <p>client/project-specific utilization of Retina-ready images—we don’t always do it, but here’s how if the project dictates it</p>
+                    <p>client/project-specific utilization of Retina-ready images—we don't always do it, but here's how if the project dictates it</p>
                     <ul>
-                        <li>Utilization of sprites at the least, for anything that’s not content imagery—all icons, page design elements and concerns that are not actual content imagery should be served up as text-encoded SVG, PNG assets included as data-uri, inline in markup or in CSS</li>
+                        <li>Utilization of sprites at the least, for anything that's not content imagery—all icons, page design elements and concerns that are not actual content imagery should be served up as text-encoded SVG, PNG assets included as data-uri, inline in markup or in CSS</li>
                     </ul>
                 </div>
                 <!--<div class="topic__resources">
@@ -270,11 +270,11 @@ body {
                         <li>Indentation - Use of 4 spaces or tab as indentation</li>
                         <li>Semantic, well-structured HTML5 markup</li>
                         <ul>
-                            <li>Pay attention to both what elements are being used and whether they match the W3C’s intended purpose</li>
+                            <li>Pay attention to both what elements are being used and whether they match the W3C's intended purpose</li>
                             <li>Use section and h elements to create a structured document, easily navigable by humans of any physical capability and robots as well (test with “outline” browser add-on - <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)" target="_blank">https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)</a></li>
                         </ul>
                         <li>Minimalist — use as few elements as possible to accomplish a layout, always default to placing and positioning actual semantic elements instead of wrapper divs, etc, whenever possible</li>
-                        <li>Id’s vs class attributes for referencing DOM elements</li>
+                        <li>Id's vs class attributes for referencing DOM elements</li>
                     </ul>
                 </div>
                 <!--<div class="topic__resources">
@@ -344,7 +344,7 @@ body {
                 </div>
                 <div class="topic__content">
                     <ul>
-                        <li>Bootstrap — we almost always use it, but make a smart decision.  we don’t HAVE to use it. (Current version - 4)</li>
+                        <li>Bootstrap — we almost always use it, but make a smart decision.  we don't HAVE to use it. (Current version - 4)</li>
                         <li>Limit framework assets to custom builds that only include the exact modules needed.</li>
                         <ul>
                             <li>Start this way at the scaffolding of a project by beginning with a minimal build of bootstrap jquery, etc, then BUILD on it as is required during the unfolding of the front-end build.</li>
@@ -371,8 +371,8 @@ body {
                         <li>Again, readability and understandability</li>
                         <li>Attention to selector complexity — keep selectors light via BEM conventions and limiting nesting in SASS to ensure light selectors in the browser</li>
                         <li>ALWAYS utilize BEM basics for creating CSS classes</li>
-                        <li>Always target CLASSES and not object ID’s for styling</li>
-                        <li>Use an “order-by-type” methodology as follows (order of the actual properties within the grouping isn’t as important)</li>
+                        <li>Always target CLASSES and not object ID's for styling</li>
+                        <li>Use an “order-by-type” methodology as follows (order of the actual properties within the grouping isn't as important)</li>
                         <ul>
                             <li>Layout Properties (position, float, clear, display, overflow, z-index)</li>
                             <li>Box Model Properties (width, height, margin, padding)</li>
@@ -462,7 +462,7 @@ body {
                     <h4>Vendor Prefixes</h4>
                     <p>Creating a Mixin to cover all prefixes (can we always do this?  we should look into using and always using Compass now that we are in SASS land)</p>
                     <h4>Inline Styling</h4>
-                    <p>Don’t ever do it unless you have a dynamic UI component adding styles to an element on the fly that CAN’T be put into a dynamically added rule that resides fully in a stylesheet</p>
+                    <p>Don't ever do it unless you have a dynamic UI component adding styles to an element on the fly that CAN'T be put into a dynamically added rule that resides fully in a stylesheet</p>
                     <h4>Comments</h4>
                     <p>Use of comments to separate Sections and Parts—again, understandability and verbose commenting as an overarching theme</p>
                 </div>
@@ -488,14 +488,17 @@ body {
                     <h2>JQuery Use</h2>
                 </div>
                 <div class="topic__content">
-
+                    <ul>
+                        <li>Go easy on the creation of jquery objects, each $(...) brings a lot of overhead with it</li>
+                        <li>Leverage jQuery to speed development but keep an eye on performance where possible if other libraries like Underscore/Lodash would perform tasks in a more performant manner</li>
+                    </ul>
                 </div>
-                <!--<div class="topic__resources">
+                <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                        <li class="topic__resourcesListItem"><a href="https://blog.codingbox.io/10-jquery-performance-tips-tricks-872f170387cc" target="_blank">https://blog.codingbox.io/10-jquery-performance-tips-tricks-872f170387cc</a></li>
                     </ul>
-                </div>-->
+                </div>
             </div>
 
             <!-- Javascript -->
@@ -504,7 +507,12 @@ body {
                     <h2>General Javascript Concerns</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <ul>
+                        <li>Talk syntax conventions-get specific</li>
+                        <li>We use linting in our gulp builds to ensure code quality</li>
+                        <li>“use strict”;</li>
+                        <li>Code location in closures for no-conflict attention</li>
+                    </ul>
                 </div>
                 <!--<div class="topic__resources">
                     <h5>Resources:</h5>
@@ -520,7 +528,14 @@ body {
                     <h2>JavaScript Frameworks for SPA dev</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <ul>
+                        <li>Angular, react, durandal—whatever we're using, we should pay attention to what EXACTLY we're using</li>
+                        <li>Think along the same lines as UI frameworks, start simple and build</li>
+                        <li>Choose client-side JS dependencies wisely as to not bloat a project's external assets</li>
+                        <li>Consider performance.  when vetting modules/plugins, etc, seek out any evidence of performance cost and weigh the utility of using or not using it</li>
+                        <li>Consider reputation of open source tools—pay attention to the number of contributors and open issues, when vetting open source modules/plugins that may be found .  pick ones that seem solid. think twice about using ones that are likely to end up with bugs not yet discovered, if a project leaves little time to deal with such incidents</li>
+                        <li>Choose tools with good documentation</li>
+                    </ul>
                 </div>
                 <!--<div class="topic__resources">
                     <h5>Resources:</h5>
@@ -536,7 +551,10 @@ body {
                     <h2>Component-based Client-side Application Architecture</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <ul>
+                        <li>We should be designing all of our JS SPA’s in a component-oriented fashion, grouping HTML templates, JS logic and CSS rules in component directories</li>
+                        <li>Component-specific concerns should live in a single location in the architecture and be namespaced/encapsulated from conflict with outside concerns—both for CSS and JS concerns.</li>
+                    </ul>
                 </div>
                 <!--<div class="topic__resources">
                     <h5>Resources:</h5>
@@ -552,14 +570,19 @@ body {
                     <h2>Front-end Build Tooling</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <ul>
+                        <li>Gulp is our jam</li>
+                        <li>Sample gulp configuration, as a boilerplate to bootstrap projects</li>
+                        <li>Elaborate on use of source maps and watch tasks</li>
+                    </ul>
                 </div>
-                <!--<div class="topic__resources">
+                <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                        <li class="topic__resourcesListItem"><a href="https://gulpjs.com/" target="_blank">https://gulpjs.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.npmjs.com/" target="_blank">https://www.npmjs.com/</a></li>
                     </ul>
-                </div>-->
+                </div>
             </div>
 
             <!-- Version Control -->
@@ -568,14 +591,17 @@ body {
                     <h2>Version Control</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <ul>
+                        <li>Git’s lightweight branching as a dev practice is an extremely useful tool for experimenting with UI options and vetting competing options. We really should use nothing else</li>
+                    </ul>
                 </div>
-                <!--<div class="topic__resources">
+                <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                        <li class="topic__resourcesListItem"><a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.atlassian.com/git/tutorials/what-is-git" target="_blank">https://www.atlassian.com/git/tutorials/what-is-git</a></li>
                     </ul>
-                </div>-->
+                </div>
             </div>
 
             <!-- Responsive Web Design -->
@@ -584,7 +610,23 @@ body {
                     <h2>Responsive Web Design</h2>
                 </div>
                 <div class="topic__content">
-            
+                    <h4>Goals</h4>
+                    <p>list goals here</p>
+                    <h4>Intro</h4>
+                    <p>intro here</p>
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li>Grid</li>
+                        <li>Bootstrap Coverage</li>
+                        <li>Breakpoints</li>
+                        <li>Media Queries</li>
+                        <li>Mobile First (truly implement mobile first—our design efforts should support a truly mobile-first development ethos)</li>
+                        <li>Responsive Images</li>
+                        <li>SVGs</li>
+                        <li>Tables</li>
+                        <li>We don't always need a framework for media queries</li>
+                        <li>fluid vs adaptive</li>
+                    </ul>
                 </div>
                 <!--<div class="topic__resources">
                     <h5>Resources:</h5>
