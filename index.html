@@ -168,19 +168,24 @@ body {
                 </div>
                 <div class="topic__content">
                     <h4>Assets</h4>
-                    <p>Location of external assets for load performance — follow HTML5 boilerplate standards.</p>
+                    <p>Location of calls to assets in markup, for page load performance:  follow HTML5 boilerplate standards for placement of elements that call assets.</p>
                     <h4>CDN of Assets</h4>
-                    <p>Delivery by CDN should always be utilized to speed loading of assets.</p>
+                    <p>Delivery by CDN should always be utilized to speed loading of assets. Most Cloud projects have all assets delivered by CDN. Make a smart choice on whether popular libraries like jQuery and Bootstrap should be loaded separately via popular CDN, to try to take advantage of browser caching. This may be a moot point for some JS frameworks that are opinionated about how they bundle assets. Just be mindful of what is going on in your project.</p>
                     <h4>Limit HTTP Requests</h4>
                     <p>Always attempt to limit http request count for any given page, by making smart decisions</p>
+                    <h4>Utilize image sprites or inline, encoded images appropriately</h4>
+                    <p>We want to limit HTTP requests needed for calling in image files. For small images like icons or logos, consider inline base-64 encoded data URI's for images in CSS or markup. Or consider using an image sprite for consolidating many images required in an application interface or website pages.  Just don't let a page have many separate calls to load images to the page unless there's a good reason, like programmatically injected images or large images, or images that you WANT to be returned in SE results.</p>
 
                 </div>
                 <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
+                        <li class="topic__resourcesListItem"><a href="https://html5boilerplate.com/" target="_blank">https://html5boilerplate.com/</a></li>
                         <li class="topic__resourcesListItem"><a href="https://www.sitepoint.com/introduction-html5-boilerplate/" target="_blank">https://www.sitepoint.com/introduction-html5-boilerplate/</a></li>
                         <li class="topic__resourcesListItem"><a href="https://gtmetrix.com/why-use-a-cdn.html" target="_blank">https://gtmetrix.com/why-use-a-cdn.html</a></li>
                         <li class="topic__resourcesListItem"><a href="https://www.giftofspeed.com/fewer-http-requests/" target="_blank">https://www.giftofspeed.com/fewer-http-requests/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://duri.me/" target="_blank">http://duri.me/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://www.grumpicon.com/" target="_blank">http://www.grumpicon.com/</a></li>
                     </ul>
                 </div>
             </div>
@@ -191,6 +196,9 @@ body {
                     <h2>General Practices for Accessibility</h2>
                 </div>
                 <div class="topic__content">
+                    <h4>Follow WCAG2 guidelines</h4>
+                    <p>We should follow ALL level A requirements to ensure accessibility, but strive to hit level AA for all websites.</p>
+                    <h4>Some big ones of note:</h4>
                     <ul>
                         <li>Provide text alternatives for non-text content</li>
                             <ul>
@@ -208,6 +216,7 @@ body {
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
                         <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/intro/wcag" target="_blank">https://www.w3.org/WAI/intro/wcag</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0" target="_blank">How to Meet WCAG 2 (Quick Reference)</a></li>
                         <li class="topic__resourcesListItem"><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank">https://www.wuhcag.com/wcag-checklist/</a></li>
                     </ul>
                 </div>
@@ -247,16 +256,18 @@ body {
                     <p>Try to keep file sizes for images under 500kb if possible. Larger images may exceed but we should try to keep them lower. Average file size should be around 200 – 350kb.</p>
                     <h4>Retina-Ready Images</h4>
                     <p>client/project-specific utilization of Retina-ready images—we don't always do it, but here's how if the project dictates it</p>
-                    <ul>
-                        <li>Utilization of sprites at the least, for anything that's not content imagery—all icons, page design elements and concerns that are not actual content imagery should be served up as text-encoded SVG, PNG assets included as data-uri, inline in markup or in CSS</li>
-                    </ul>
+                    <h4>Utilize image sprites or inline, encoded images appropriately</h4>
+                    <p>We want to limit HTTP requests needed for calling in image files. For small images like icons or logos, consider inline base-64 encoded data URI's for images in CSS or markup. Or consider using an image sprite for consolidating many images required in an application interface or website pages.  Just don't let a page have many separate calls to load images to the page unless there's a good reason, like programmatically injected images or large images, or images that you WANT to be returned in SE results.</p>
                 </div>
-                <!--<div class="topic__resources">
+                <div class="topic__resources">
                     <h5>Resources:</h5>
                     <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
+                        <li class="topic__resourcesListItem"><a href="http://duri.me/" target="_blank">http://duri.me/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://www.grumpicon.com/" target="_blank">http://www.grumpicon.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://tinypng.com/" target="_blank">https://tinypng.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="http://css.spritegen.com/" target="_blank">http://css.spritegen.com/</a></li>
                     </ul>
-                </div>-->
+                </div>
             </div>
 
             <!-- HTML Markup -->
