@@ -175,6 +175,10 @@ body {
                     <p>Always attempt to limit http request count for any given page, by making smart decisions</p>
                     <h4>Utilize image sprites or inline, encoded images appropriately</h4>
                     <p>We want to limit HTTP requests needed for calling in image files. For small images like icons or logos, consider inline base-64 encoded data URI's for images in CSS or markup. Or consider using an image sprite for consolidating many images required in an application interface or website pages.  Just don't let a page have many separate calls to load images to the page unless there's a good reason, like programmatically injected images or large images, or images that you WANT to be returned in SE results.</p>
+                    <ul>
+                        <li>We should utilize sprites at the least, for anything that’s not content imagery—all icons, page design elements and concerns that are not actual content imagery should probably be served up as base64-encoded SVG or PNG data-uri's, inline in markup or in CSS.</li>
+                        <li>If icons abound, we are probably dealing with visual design based on an icon font, so include it once and then utilize it for icons all over the place (think FontAwesome, SymbolSet, Google Material Design icons).</li>
+                    </ul>
 
                 </div>
                 <div class="topic__resources">
@@ -197,19 +201,19 @@ body {
                 </div>
                 <div class="topic__content">
                     <h4>Follow WCAG2 guidelines</h4>
-                    <p>We should follow ALL level A requirements to ensure accessibility, but strive to hit level AA for all websites.</p>
-                    <h4>Some big ones of note:</h4>
+                    <p>We should always deliver code to meet WCAG 2 requirements for accessibility at Level A.  Ideally we should strive to meet Level AA, as well, and Level AAA as project agreements allow.</p>
+                    <h4>This starts with the basics:</h4>
                     <ul>
-                        <li>Provide text alternatives for non-text content</li>
-                            <ul>
-                                <li>Using aria-label to provide labels for objects</li>
-                                <li>Using aria-labelledby to provide a text alternative for non-text content</li>
-                                <li>Using alt attributes on img elements</li>
-                            </ul>
+                        <li>Always write semantic markup that adheres to a meaningful document structure, and cut markup to only that which is truly needed in order to accomplish this goal and allow for correct visual styling.  See best practices in the <a href="#htmlMarkup">HTML</a> section.</li>
                         <li>Make all functionality available from a keyboard</li>
-                        <li>Give users enough time to read and use content</li>
-                        <li>Do not use content that causes seizures</li>
-                        <li>Organize documents so they can be read without stylesheets</li>
+                            <ul>
+                                <li>Tab order controlled</li>
+                                <li>Use controls (and vet third-party ones) with keyboard accessibility</li>
+                                <li>Prefer styling native controls over using JS-based adaptations, or use methods that retain native controls for machine-understandability while presenting visually different appearance.</li>
+                            </ul>
+                        <li>Leverage ARIA attributes to make generic elements have meaning as needed, and to allow accessibility of JS-based interactive, for screen readers. Look for ARIA in third-party tools leveraged for sites.</li>
+                        <li>Note ARIA's utilization as described in the WCAG guidelines.</li>
+                        <li>Validate markup to find those missing alt tags, etc...</li>
                     </ul>
                 </div>
                 <div class="topic__resources">
@@ -218,6 +222,7 @@ body {
                         <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/intro/wcag" target="_blank">https://www.w3.org/WAI/intro/wcag</a></li>
                         <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0" target="_blank">How to Meet WCAG 2 (Quick Reference)</a></li>
                         <li class="topic__resourcesListItem"><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank">https://www.wuhcag.com/wcag-checklist/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank">https://www.w3.org/WAI/standards-guidelines/aria/</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,10 +234,12 @@ body {
                 </div>
                 <div class="topic__content">
                     <ul>
+                        <li>Write valid, semantic markup that conveys meaning</li>
                         <li>Make sure the site is crawlable when necessary</li>
                         <li>Make sure that Googlebot can “see” all the site's pages</li>
                         <li>Make sure Googlebot can access all content and links completely </li>
                         <li>Make sure Googlebot can access all of my page resources</li>
+                        <li>Basically, use robots.txt and sitemap.xml files per Google's recommendation, to tell the crawler what to do.</li>
                     </ul>
                 </div>
                 <div class="topic__resources">
@@ -253,9 +260,9 @@ body {
                 <div class="topic__content">
                     <h4>File Size</h4>
                     <p>Appropriate compression-to-quality ratio to optimize file size, for delivery in less-than-ideal wireless networks circumstances—aim to make mobile experience fast.</p>
-                    <p>Try to keep file sizes for images under 500kb if possible. Larger images may exceed but we should try to keep them lower. Average file size should be around 200 – 350kb.</p>
+                    <p>Try to keep file sizes for images as low as possible given the above and balancing quality with speed. Think about trying to keep banner images in the 150-250KB range at 72dpi, unless you are optimizing for Retina/higher-density screens and/or large monitors.</p>
                     <h4>Retina-Ready Images</h4>
-                    <p>client/project-specific utilization of Retina-ready images—we don't always do it, but here's how if the project dictates it</p>
+                    <p>client/project-specific utilization of Retina-ready images—we don't always do it, but if we do make sure you are following some accepted best practices for doing so. Start with Chris Coyier's advice: <a href="https://css-tricks.com/snippets/css/retina-display-media-query/">https://css-tricks.com/snippets/css/retina-display-media-query/</a></p>
                     <h4>Utilize image sprites or inline, encoded images appropriately</h4>
                     <p>We want to limit HTTP requests needed for calling in image files. For small images like icons or logos, consider inline base-64 encoded data URI's for images in CSS or markup. Or consider using an image sprite for consolidating many images required in an application interface or website pages.  Just don't let a page have many separate calls to load images to the page unless there's a good reason, like programmatically injected images or large images, or images that you WANT to be returned in SE results.</p>
                 </div>
@@ -266,6 +273,7 @@ body {
                         <li class="topic__resourcesListItem"><a href="http://www.grumpicon.com/" target="_blank">http://www.grumpicon.com/</a></li>
                         <li class="topic__resourcesListItem"><a href="https://tinypng.com/" target="_blank">https://tinypng.com/</a></li>
                         <li class="topic__resourcesListItem"><a href="http://css.spritegen.com/" target="_blank">http://css.spritegen.com/</a></li>
+                        <li class="topic__resourcesListItem"><a href="https://css-tricks.com/snippets/css/retina-display-media-query/">https://css-tricks.com/snippets/css/retina-display-media-query/</a></li>
                     </ul>
                 </div>
             </div>
@@ -278,14 +286,15 @@ body {
                 <div class="topic__content">
                     <ul>
                         <li>Write valid HTML5 and try to validate it if any doubt—great way to catch required attributes omitted or other issues that could adversely affect page crawlability/ranking or accessibility. *can test here: <a href="https://validator.w3.org/#validate_by_uri" target="_blank">https://validator.w3.org/#validate_by_uri</a></li>
-                        <li>Indentation - Use of 4 spaces or tab as indentation</li>
-                        <li>Semantic, well-structured HTML5 markup</li>
+                        <li>Indentation - Use of 4 space tabs not 2, for readability and standard formatting</li>
+                        <li>Semantic, well-structured HTML5 markup (see the <a href="#semanticMarkup">Semantic Markup</a> area</li>
                         <ul>
-                            <li>Pay attention to both what elements are being used and whether they match the W3C's intended purpose</li>
-                            <li>Use section and h elements to create a structured document, easily navigable by humans of any physical capability and robots as well (test with “outline” browser add-on - <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)" target="_blank">https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)</a></li>
+                            <li>Pay attention to both what elements are being used and whether they match the W3C's spec'd purpose</li>
+                            <li>Take full advantage of semantic HTML5 elements (section, article, aside, definition lists, and ordered/unordered lists, menu, nav, header, footer, etc...) to create a structured document, easily navigable by humans of any physical capability and robots as well (test with “HTML5 Outliner” browser add-on - <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)" target="_blank">https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en)</a></li>
                         </ul>
-                        <li>Minimalist — use as few elements as possible to accomplish a layout, always default to placing and positioning actual semantic elements instead of wrapper divs, etc, whenever possible</li>
-                        <li>Id's vs class attributes for referencing DOM elements</li>
+                        <li>Minimalist — use as few elements as possible to accomplish a layout, always default to placing and positioning actual semantic elements instead of wrapper divs, etc, unless a rare design ask makes that impossible.</li>
+                        <li>ID's vs class attributes for referencing DOM elements is the fastest way, by far, to look up a single element for attaching interactive behaviors, so consider that when you're writing an element to be addressed by JS scripting outside of a SPA like Angular or the like.</li>
+                        <li>Write classnames to elements you know will be addressed with CSS using BEM syntax (see the <a href="#uiStyling">UI Styling area</a>)</li>
                     </ul>
                 </div>
                 <!--<div class="topic__resources">
@@ -303,42 +312,16 @@ body {
                 </div>
                 <div class="topic__content">
                     <h4>Definition</h4>
+                    <p>Semantic markup is HTML code that leverages defined element types and meaningful structure, in order to present an HTML Document that is understandable in structure and content without visual decoration. It is a well-structured, hierarchical document of well-labeled content and/or tools.</p>
                     <ol>
                         <li>Semantic markup requires that HTML elements be used according to their intended purpose.</li>
                         <li>Semantic markup requires the separation of content and presentation.</li>
                     </ol>
-                    <p>When writing semantic markup, we use HTML tags to tell browsers something about the contents of the element. In semantic markup, tags are no longer just a way to get content to show up on a web page in a human-readable format. The tags themselves become a way to tell a machine (whether a browser, a computer, a smartphone, or another smart device) something about the meaning of the content. To write semantic markup, we must use HTML tags correctly so that our markup is both human-readable and machine-readable. (Courtesy of <a href="https://html.com/semantic-markup/" target="_blank">https://html.com/semantic-markup/</a>)</p>
-                    <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
-                    <h4>Examples</h4>
-                    <p>Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content.</p>
-                    <p>Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.</p>
-                    <h4>HTML5 semantic elements</h4>
-                    <ul>
-                        <li>&lt;article&gt;</li>
-                        <li>&lt;aside&gt;</li>
-                        <li>&lt;details&gt;</li>
-                        <li>&lt;figcaption&gt;</li>
-                        <li>&lt;figure&gt;</li>
-                        <li>&lt;footer&gt;</li>
-                        <li>&lt;header&gt;</li>
-                        <li>&lt;main&gt;</li>
-                        <li>&lt;mark&gt;</li>
-                        <li>&lt;nav&gt;</li>
-                        <li>&lt;section&gt;</li>
-                        <li>&lt;summary&gt;</li>
-                        <li>&lt;time&gt;</li>
-                    </ul>
-                    <h4>Definitions</h4>
-                    <ul>
-                        <li><strong>header</strong>: A container to be used for a web page header which typically contains the site logo, heading elements, and site navigation.</li>
-                        <li><strong>footer</strong>: A container to be used for a web page footer which typically contains authorship, contact, and copyright information in addition to navigational links and a link back to the top of the web page.</li>
-                        <li><strong>main</strong>: A high-level element used to contain all of the content that is unique to a single web page and not repeated across multiple web pages.</li>
-                        <li><strong>nav</strong>: An element to contain blocks of site navigation links. This element is typically placed in the page header and footer, and may also be used in an aside (sidebar) element as well.</li>
-                        <li><strong>section</strong>: The section element is used to mark off sections of a document, such as chapters or major sections of a long form post.</li>
-                        <li><strong>aside</strong>: Use to identify content that is related to the main content on the page but not part of the primary flow of the document. For example, the aside element may contain a glossary definition of a term that appears in a blog post or it may contain advertisements related to the contents of the page.</li>
-                        <li><strong>article</strong>: The article element is used to identify a block of content suitable for reuse and syndication in other settings, such as a blog post or technical article.</li>
-                    </ul>
-
+                    <blockquote class="blockquote">When writing semantic markup, we use HTML tags to tell browsers something about the contents of the element. In semantic markup, tags are no longer just a way to get content to show up on a web page in a human-readable format. The tags themselves become a way to tell a machine (whether a browser, a computer, a smartphone, or another smart device) something about the meaning of the content. To write semantic markup, we must use HTML tags correctly so that our markup is both human-readable and machine-readable. <div class="blockquote__attribution">From <a href="https://html.com/semantic-markup/" target="_blank">https://html.com/semantic-markup/</a></div></blockquote>                    
+                    <h4>Semantic HTML Elements</h4>
+                    <p>A semantic element clearly describes its content to human and machine visitors, and developers alike.</p>
+                    <p>Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt;—tell nothing about their content.</p>
+                    <p>Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;details&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;header&gt;, &lt;main&gt;, &lt;mark&gt;, &lt;menu&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;summary&gt;, &lt;time&gt;, &lt;dl&gt;, &lt;ul&gt;, &lt;ol&gt;, etc.—much more revealing of their purpose. </p>
                 </div>
                 <div class="topic__resources">
                     <h5>Resources:</h5>
@@ -466,12 +449,12 @@ body {
                             </div>
                         </div>
                     </ul>
-                    <h4>SASS — our default pre-processor</h4>
-                    <p>Why goes here</p>
-                    <h4>Formatting</h4>
-                    <p>Indentation of 4 spaces or 1 tab</p>
+                    <h3>SASS or LESS, our go-to CSS pre-processors</h3><br/>
+                    <p>We prefer SASS or LESS for their compatability with standard CSS syntax, and ease of use.</p>
+                    <h4>Be Mindful of Output</h4>
+                    <p>Some operations that may lead to conveniences in your SASS source code cause bloat in CSS output. When you use mixins or nest rules deeply, you can end up with bloat that could be eliminated by utilizing BEM naming conventions, keeping nesting of selectors light, and by using classes to decorate similar elements directly, instead of including mixins as sub-rules of rule definitions in the source code to share styling across many elements.  Sometimes you have to have redundant output, but be mindful of what your SCSS is spitting out.</p>
                     <h4>Vendor Prefixes</h4>
-                    <p>Creating a Mixin to cover all prefixes (can we always do this?  we should look into using and always using Compass now that we are in SASS land)</p>
+                    <p>We should use auto-prefixer as a rule, to handle deprecation of vendor prefixes.</p>
                     <h4>Inline Styling</h4>
                     <p>Don't ever do it unless you have a dynamic UI component adding styles to an element on the fly that CAN'T be put into a dynamically added rule that resides fully in a stylesheet</p>
                     <h4>Comments</h4>
@@ -496,12 +479,13 @@ body {
             <!-- Jquery Use -->
             <div class="topic animated" id="jqueryUse">
                 <div class="topic__title">
-                    <h2>JQuery Use</h2>
+                    <h2>JS and jQuery</h2>
+                    <p>For one-off interactive functionality outside of a framework like Angular, jQuery is super useful. But some things to keep in mind:
                 </div>
                 <div class="topic__content">
                     <ul>
-                        <li>Go easy on the creation of jquery objects, each $(...) brings a lot of overhead with it</li>
-                        <li>Leverage jQuery to speed development but keep an eye on performance where possible if other libraries like Underscore/Lodash would perform tasks in a more performant manner</li>
+                        <li>Go easy on the creation of jquery objects, each $(...) brings a lot of overhead with it. Create an object related to your widget and then use jQuery's find or children methods to select child elements of that object and deal with them.</li>
+                        <li>If you can, just use vanilla javascript to grab your elements and change their properties directly without jQuery. For a lot of things it is not at all harder.</li>
                     </ul>
                 </div>
                 <div class="topic__resources">
@@ -512,7 +496,7 @@ body {
                 </div>
             </div>
 
-            <!-- Javascript -->
+            <!-- Javascript 
             <div class="topic animated" id="javascript">
                 <div class="topic__title">
                     <h2>General Javascript Concerns</h2>
@@ -525,15 +509,10 @@ body {
                         <li>Code location in closures for no-conflict attention</li>
                     </ul>
                 </div>
-                <!--<div class="topic__resources">
-                    <h5>Resources:</h5>
-                    <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
-                    </ul>
-                </div>-->
-            </div>
 
-            <!-- Javascript Frameworks -->
+            </div> -->
+
+            <!-- Javascript Frameworks 
             <div class="topic animated" id="javascriptFrameworks">
                 <div class="topic__title">
                     <h2>JavaScript Frameworks for SPA dev</h2>
@@ -548,23 +527,19 @@ body {
                         <li>Choose tools with good documentation</li>
                     </ul>
                 </div>
-                <!--<div class="topic__resources">
-                    <h5>Resources:</h5>
-                    <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
-                    </ul>
-                </div>-->
-            </div>
+
+            </div> -->
 
             <!-- Component Based Architecture -->
             <div class="topic animated" id="componentBasedArchitecture">
                 <div class="topic__title">
-                    <h2>Component-based Client-side Application Architecture</h2>
+                    <h2>Component-based, Modular Client-side Concerns</h2>
+                    <p>We should be architecting all of our code concerns in as modular fashion as possible. Best practices for modular application development should be followed in our use of SASS and templates. 
                 </div>
                 <div class="topic__content">
                     <ul>
-                        <li>We should be designing all of our JS SPA’s in a component-oriented fashion, grouping HTML templates, JS logic and CSS rules in component directories</li>
-                        <li>Component-specific concerns should live in a single location in the architecture and be namespaced/encapsulated from conflict with outside concerns—both for CSS and JS concerns.</li>
+                        <li>Keep CSS modularized into rules-per-area, or rules-per-component. Locating these small files either with their template concerns or in a mirrored structure to that of the templates makes things easy to deal with. A well-organized structure of well-titled directories with small, modularized CSS concerns and related templates inside is an example of a useful structure that we should leverage.</li>
+                        <li>Modular concerns should live in a single location in the architecture and be namespaced/encapsulated from conflict with outside concerns—both for CSS and JS concerns.</li>
                     </ul>
                 </div>
                 <!--<div class="topic__resources">
@@ -583,8 +558,8 @@ body {
                 <div class="topic__content">
                     <ul>
                         <li>Gulp is our jam</li>
-                        <li>Sample gulp configuration, as a boilerplate to bootstrap projects</li>
-                        <li>Elaborate on use of source maps and watch tasks</li>
+                        <li>Take a look at the source code for this standards doc, and see how gulp builds it and serves it up, really easily.</li>
+                        <li>Learn enough gulp to be able to spin up a server and compile a simple architecture of CSS, JS and HTML into output to the browser—super useful for crafting living style guides, things like this. Exploring layouts and techniques.</li>
                     </ul>
                 </div>
                 <div class="topic__resources">
@@ -596,7 +571,7 @@ body {
                 </div>
             </div>
 
-            <!-- Version Control -->
+            <!-- Version Control 
             <div class="topic animated" id="versionControl">
                 <div class="topic__title">
                     <h2>Version Control</h2>
@@ -613,9 +588,9 @@ body {
                         <li class="topic__resourcesListItem"><a href="https://www.atlassian.com/git/tutorials/what-is-git" target="_blank">https://www.atlassian.com/git/tutorials/what-is-git</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
 
-            <!-- Responsive Web Design -->
+            <!-- Responsive Web Design 
             <div class="topic animated" id="responsiveWebDesign">
                 <div class="topic__title">
                     <h2>Responsive Web Design</h2>
@@ -639,13 +614,8 @@ body {
                         <li>fluid vs adaptive</li>
                     </ul>
                 </div>
-                <!--<div class="topic__resources">
-                    <h5>Resources:</h5>
-                    <ul class="topic__resourcesList">
-                        <li class="topic__resourcesListItem"><a href="" target="_blank"></a></li>
-                    </ul>
-                </div>-->
-            </div>
+
+            </div>-->
 
             <!-- About Cloud -->
             <div class="topic animated" id="aboutCloud">
@@ -695,13 +665,13 @@ body {
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#semanticMarkup">Semantic Markup</a></li>
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#uiFrameworks">UI Frameworks</a></li>
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#uiStyling">UI Styling</a></li>
-                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#jqueryUse">jQuery Use</a></li>
-                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#javascript">Javascript</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#jqueryUse">JS and jQuery</a></li>
+<!--                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#javascript">Javascript</a></li>
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#javascriptFrameworks">Javascript Frameworks</a></li>
-                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#componentBasedArchitecture">Component Based Architecture</a></li>
+ -->                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#componentBasedArchitecture">Component-Based Architecture</a></li>
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#buildTooling">Build Tooling</a></li>
-                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#versionControl">Version Control</a></li>
-                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#responsiveWebDesign">Responsive Web Design</a></li>
+<!--                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#versionControl">Version Control</a></li>
+                    <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#responsiveWebDesign">Responsive Web Design</a></li> -->
                     <li class="navigationSidebar__navListItem"><a class="navigationSidebar__navListItemLink" href="#aboutCloud">About Cloud</a></li>
                 </ul>
                 <canvas class="navigationSidebar__navSquare">

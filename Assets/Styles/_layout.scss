@@ -40,6 +40,18 @@ div {
     }
 }
 
+.blockquote {
+    padding: 40px;
+    margin: 0 0 40px 0;
+    line-height: 26px;
+    font-style: italic;
+    background: #EFEFEF;
+    &__attribution {
+        margin-top: 20px;
+    }
+}
+
+
 ///////////////////////////////////////////
 // Topic styles
 
