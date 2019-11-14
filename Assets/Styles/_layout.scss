@@ -23,6 +23,8 @@ div {
     @include flexbox();
     @include prefix(flex-wrap, wrap, webkit moz ms o);
 
+    width: 100%;
+
     &__wrapper {
         @include flexbox();
         @include prefix(justify-content, space-between, webkit moz ms o);

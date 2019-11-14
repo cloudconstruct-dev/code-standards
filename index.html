@@ -480,9 +480,9 @@ body {
             <div class="topic animated" id="jqueryUse">
                 <div class="topic__title">
                     <h2>JS and jQuery</h2>
-                    <p>For one-off interactive functionality outside of a framework like Angular, jQuery is super useful. But some things to keep in mind:
                 </div>
                 <div class="topic__content">
+                    <p>For one-off interactive functionality outside of a framework like Angular, jQuery is super useful. But some things to keep in mind:</p>
                     <ul>
                         <li>Go easy on the creation of jquery objects, each $(...) brings a lot of overhead with it. Create an object related to your widget and then use jQuery's find or children methods to select child elements of that object and deal with them.</li>
                         <li>If you can, just use vanilla javascript to grab your elements and change their properties directly without jQuery. For a lot of things it is not at all harder.</li>
@@ -534,9 +534,10 @@ body {
             <div class="topic animated" id="componentBasedArchitecture">
                 <div class="topic__title">
                     <h2>Component-based, Modular Client-side Concerns</h2>
-                    <p>We should be architecting all of our code concerns in as modular fashion as possible. Best practices for modular application development should be followed in our use of SASS and templates. 
+                    
                 </div>
                 <div class="topic__content">
+                    <p>We should be architecting all of our code concerns in as modular fashion as possible. Best practices for modular application development should be followed in our use of SASS and templates.</p> 
                     <ul>
                         <li>Keep CSS modularized into rules-per-area, or rules-per-component. Locating these small files either with their template concerns or in a mirrored structure to that of the templates makes things easy to deal with. A well-organized structure of well-titled directories with small, modularized CSS concerns and related templates inside is an example of a useful structure that we should leverage.</li>
                         <li>Modular concerns should live in a single location in the architecture and be namespaced/encapsulated from conflict with outside concerns—both for CSS and JS concerns.</li>

@@ -8,17 +8,17 @@ var gulp = require('gulp'),
 
 
 // JS
-gulp.task('js', function () {
+gulp.task('js', gulp.parallel(function () {
     // gulp.src(['./src/js/vendor/**/*.*'])
     //     .pipe(gulp.dest('./js/vendor/'));
     return gulp.src(['./Assets/Scripts/site.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./Assets/dist/js/'));
-});
+}));
 
 
 // sass task
-gulp.task('sass', function() {
+gulp.task('sass', gulp.parallel(function() {
     return gulp.src(['./Assets/Styles/general.scss'])
         .pipe(sourcemaps.init())
             .pipe(sass().on('error', sass.logError))
@@ -28,16 +28,16 @@ gulp.task('sass', function() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./Assets/dist/css/'));
-});
+}));
 
 // Minify CSS
-gulp.task('minify-css', () => {
+gulp.task('minify-css', gulp.parallel(() => {
     return gulp.src('./Assets/dist/css/*.css')
       .pipe(sourcemaps.init())
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('.'));
-  });
+  }));
 
 // local server for dev
 gulp.task('serve', function() {
@@ -51,16 +51,16 @@ gulp.task('serve', function() {
 
 
 // Watchers
-gulp.task('watch', function() {
+gulp.task('watch', gulp.series(function() {
     gulp.watch([
         './Assets/Styles/*.scss'
-    ], ['sass', 'minify-css']);
+    ], gulp.series('sass', 'minify-css'));
     gulp.watch([
         './Assets/scripts/*.js'
-    ], ['js']);    
-});
+    ],  gulp.series('js'));    
+}));
 
 
 
-gulp.task('default', ['sass', 'js', 'minify-css', 'serve', 'watch']);
+gulp.task('default', gulp.series('sass', 'js', 'minify-css', 'serve', 'watch'));
 

@@ -19,7 +19,8 @@ div {
   display: flex;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 100%; }
   .mainContent__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
